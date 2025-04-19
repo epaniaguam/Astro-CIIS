@@ -6,6 +6,7 @@ import Counter from "./Counter/Counter";
 import TitleMain from "./Counter/TitleMain.astro";
 import FlagsContainer from "./FlagsContainer.astro";
 import Label from "./Label.astro";
+const eventDate = '2025-11-17T13:30:00Z';
 ---
 
 <div class="m-auto h-auto w-full pt-36 z-50 relative sm:h-dvh">
@@ -22,7 +23,7 @@ import Label from "./Label.astro";
   </video>
 
   <dir class="mb-5">
-    <Label description="Del 11 al 15 de noviembre del 2024">
+    <Label description="Del 17 al 21 de noviembre del 2025">
       <IconStar size={5} fill="#7AAEF1" slot="icon" />
     </Label>
   </dir>
@@ -33,7 +34,16 @@ import Label from "./Label.astro";
   <div class="flex justify-center my-8 text-focus-in">
     <SocialNetwork />
   </div>
+
+  {/*
+  
+  TODO: Activar cuando se defina las nacionalidades de los ponentes
   <FlagsContainer />
+
+  */}
+
+  <Counter client:load eventDate={eventDate} />
+
 </div>
 
 <style>

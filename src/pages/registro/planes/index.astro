@@ -1,10 +1,11 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
+import { CURRENT_CIIS_EDITION } from "../../../config";
 import InscriptionContainer from "../../../views/inscription/InscriptionContainer.astro";
 import PlanContainer from "../../../views/plan/PlanContainer";
 ---
 
-<Layout title="Registro | Congreso Internacional XXV de Informática y Sistemas">
+<Layout title=`Registro | Congreso Internacional de Informática y Sistemas ${CURRENT_CIIS_EDITION}`>
   <InscriptionContainer>
     <PlanContainer client:load />
   </InscriptionContainer>

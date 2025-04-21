@@ -1,5 +1,6 @@
 ---
 import RoboticaIcon from "../../../public/icons/contest/RoboticaIcon.astro";
+import { CURRENT_CIIS_EDITION } from "../../config";
 import Layout from "../../layouts/Layout.astro";
 import Contest from "../../views/contest/components/Contest.astro";
 import Card from "../../views/feria-tecnologica/card.astro";
@@ -7,7 +8,7 @@ import EditionMainContainer from "../../views/gallery/components/EditionMainCont
 ---
 
 <Layout
-  title="Feria Tecnológica | Congreso Internacional XXV de Informática y Sistemas"
+  title=`Feria Tecnológica | Congreso Internacional de Informática y Sistemas ${CURRENT_CIIS_EDITION}`
 >
   <section class="space-y-24 mb-24 px-2 sm:px-0">
     <EditionMainContainer

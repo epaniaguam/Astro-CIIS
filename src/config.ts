@@ -1,0 +1,1 @@
+export const CURRENT_CIIS_EDITION = "XXVI";

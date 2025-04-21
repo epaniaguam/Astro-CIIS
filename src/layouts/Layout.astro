@@ -1,13 +1,19 @@
 ---
-import Footer from "../views/footer/Footer.astro";
-import { Header } from "../views/header/HeaderContainer";
-export const prerender = false;
+import Footer from '../views/footer/Footer.astro';
+import { Header } from '../views/header/HeaderContainer';
+export const prerender = false
+
+import { CURRENT_CIIS_EDITION } from "../config"; // Añadir importación
 
 interface Props {
-  title: string;
+  title?: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const {
+  title = `Congreso Internacional de Informática y Sistemas ${CURRENT_CIIS_EDITION}`,
+  description = `Descubre las últimas innovaciones en informática y sistemas en el Congreso Internacional ${CURRENT_CIIS_EDITION}. ¡Únete a los líderes de la industria!`,
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -31,11 +37,11 @@ const { title } = Astro.props;
 
     <meta
       name='title'
-      content='Congreso Internacional de Informática y Sistemas XXVI'
+      content={`Congreso Internacional de Informática y Sistemas ${CURRENT_CIIS_EDITION}`}
     />
     <meta
       name='description'
-      content='Descubre las últimas innovaciones en informática y sistemas en el Congreso Internacional XXVI. ¡Únete a los líderes de la industria!'
+      content={description}
     />
     <meta
       name='keywords'
@@ -61,8 +67,9 @@ const { title } = Astro.props;
     />
     <meta
       name='DC.title'
-      content='Congreso Internacional de Informática y Sistemas XXVI'
+      content={`Congreso Internacional de Informática y Sistemas ${CURRENT_CIIS_EDITION}`}
     />
+    {/* Cambiado */}
     <meta
       name='DC.subject'
       content='Congreso de informática, sistemas, ciberseguridad, inteligencia artificial'
@@ -72,6 +79,28 @@ const { title } = Astro.props;
       content='Riem, Butcher, Ardev y Raul'
     />
 
+    <!-- Open Graph / Facebook -->
+    <meta
+      property='og:type'
+      content='website'
+    />
+    <meta
+      property='og:url'
+      content='https://www.ciistacna.com/'
+    />
+    <meta
+      property='og:title'
+      content={`Congreso Internacional de Informática y Sistemas ${CURRENT_CIIS_EDITION}`}
+    />
+    {/* Cambiado */}
+    <meta
+      property='og:description'
+      content={description}
+    />
+    <meta
+      property='og:image'
+      content='/LogoRedes.jpg'
+    />
     <!-- Open Graph / Facebook -->
     <meta
       property='og:type'
@@ -105,11 +134,12 @@ const { title } = Astro.props;
     />
     <meta
       property='twitter:title'
-      content='Congreso Internacional de Informática y Sistemas XXVI'
+      content={`Congreso Internacional de Informática y Sistemas ${CURRENT_CIIS_EDITION}`}
     />
+    {/* Cambiado */}
     <meta
       property='twitter:description'
-      content='Descubre las últimas innovaciones en informática y sistemas en el Congreso Internacional XXVI. ¡Únete a los líderes de la industria!'
+      content={description}
     />
     <meta
       property='twitter:image'
@@ -117,7 +147,7 @@ const { title } = Astro.props;
     />
   </head>
   <body>
-    <Header client:only='react' />
+    <Header client:only />
     <slot />
     <Footer />
   </body>
@@ -134,6 +164,15 @@ const { title } = Astro.props;
       white 60%
     );
 
+    --accent-secondary: 240, 240, 240;
+    --accent-light-secondary: 250, 250, 250;
+    --accent-dark-secondary: 200, 200, 200;
+    --accent-gradient-secondary: linear-gradient(
+      45deg,
+      rgb(var(--accent-secondary)),
+      rgb(var(--accent-light-secondary)) 30%,
+      white 60%
+    );
     --accent-secondary: 240, 240, 240;
     --accent-light-secondary: 250, 250, 250;
     --accent-dark-secondary: 200, 200, 200;

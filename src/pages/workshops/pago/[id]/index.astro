@@ -1,5 +1,6 @@
 ---
 import Layout from "../../../../layouts/Layout.astro";
+import { CURRENT_CIIS_EDITION } from "../../../../config";
 import WorkshopInscriptionContainer from "../../../../views/workshops/WorkshopInscriptionContainer.astro";
 import PagoOptions from "../../../../views/workshops/components/PagoOptions";
 import useWorkshops from "../../../../views/workshops/services/useWorkshops";
@@ -18,7 +19,7 @@ export async function getStaticPaths() {
 const { id } = Astro.params;
 ---
 
-<Layout title="Talleres | Congreso Internacional XXV de Informática y Sistemas">
+<Layout title=`Talleres | Congreso Internacional de Informática y Sistemas ${CURRENT_CIIS_EDITION}`>
   <WorkshopInscriptionContainer>
     <PagoOptions idWorkshop={Number(id)} client:only />
   </WorkshopInscriptionContainer>

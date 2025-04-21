@@ -1,5 +1,6 @@
 ---
 import LayoutRegister from "../../layouts/LayoutRegister.astro"
+import { CURRENT_CIIS_EDITION } from "../../config";
 import App from "../../views/panel/App"
 
 export function getStaticPaths() {
@@ -13,6 +14,6 @@ export function getStaticPaths() {
   ];
 }
 ---
-<LayoutRegister title="Dashboard | Congreso Internacional XXV de Informática y Sistemas">
+<LayoutRegister title=`Dashboard | Congreso Internacional de Informática y Sistemas ${CURRENT_CIIS_EDITION}`>
   <App client:only />
 </LayoutRegister>

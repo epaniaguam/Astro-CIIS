@@ -3,6 +3,7 @@ interface Props {
   description: string;
 }
 const { description }: Props = Astro.props;
+import { CURRENT_CIIS_EDITION } from "../../../../config";
 ---
 
 <div class='m-auto max-w-[720px] flex flex-col gap-6 text-focus-in'>
@@ -16,7 +17,9 @@ const { description }: Props = Astro.props;
     </p>
 
     <p class='text-secondary font-bold'>
-      <strong class='font-bold text-primary'>Sistemas</strong> XXVI
+      <strong class='font-bold text-primary'>Sistemas</strong> {
+        CURRENT_CIIS_EDITION
+      }
     </p>
   </h1>
   <span class='text-center text-slate-100/75'>{description}</span>

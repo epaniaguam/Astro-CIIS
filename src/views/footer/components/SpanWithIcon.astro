@@ -6,5 +6,5 @@ const { description } : Props = Astro.props
 ---
 <div class="flex gap-x-1 sm:gap-x-3 items-center justify-center lg:justify-start">
     <slot name="icon" />
-    <span class="text-white/90 tracking-tight">{description}</span>
+    <span class="text-white/90 tracking-tight hover:underline">{description}</span>
 </div>

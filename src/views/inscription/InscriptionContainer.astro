@@ -1,5 +1,6 @@
 ---
 import Step from "./components/Step.astro";
+import { CURRENT_CIIS_EDITION } from "../../config";
 const urlPath = Astro.url.pathname;
 const active1 = urlPath.endsWith("/planes/") ? "active" : "";
 const active2 = urlPath.startsWith("/registro/user/") ? "active" : "";
@@ -41,7 +42,7 @@ const active4 = urlPath.endsWith("upload/publicogeneral/") || urlPath.endsWith("
             active2 ? "Ingresa la información respectiva" :
             active3 ? "Métodos de pago" :
             active4 ? "Documentos necesarios" :
-            "Proceso de registro para el CIISXXV"
+            `Proceso de registro para el CIIS ${CURRENT_CIIS_EDITION}`
         }
     </div>
     <slot />

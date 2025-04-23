@@ -4,6 +4,7 @@ const urlPath = Astro.url.pathname;
 const active1 = urlPath.startsWith("/workshops/user/") ? "active" : "";
 const active2 = urlPath.startsWith("/workshops/pago/") ? "active" : "";
 const active3 = urlPath.startsWith("/workshops/upload/") ? "active" : "";
+import { CURRENT_CIIS_EDITION } from "../../config";
 ---
 
 <section class="w-dvw min-h-dvh flex flex-col justify-star items-center p-6 pt-32">
@@ -33,7 +34,7 @@ const active3 = urlPath.startsWith("/workshops/upload/") ? "active" : "";
             active1 ? "Ingresa la información respectiva" :
             active2 ? "Métodos de pago" :
             active3 ? "Documentos necesarios" :
-            "Proceso de registro para el CIISXXV"
+            `Proceso de registro para el CIIS ${CURRENT_CIIS_EDITION}`
         }
     </div>
     <slot />

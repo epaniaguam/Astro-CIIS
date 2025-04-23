@@ -4,7 +4,7 @@ export const domain = "https://ciistacna.com";
 
 export const URI = {
   reports: {
-    speakers: `${domain}/reports/15/speakers.json`,
+    speakers: `${domain}/reports/16/speakers.json`,
     cronograma: `${domain}/reports/15/cronograma.json`,
     sponsors: `${domain}/reports/15/sponsors.json`,
     workshops: `${domain}/reports/15/talleres.json`,

@@ -14,7 +14,6 @@ const HeaderContainer = () => {
   const shadowButtonHover =
     "hover:shadow-[inset_0_6px_12px_#4c64d2,_0_0_34px_rgba(110,137,255,0.77),_inset_0_1px_10px_hsla(0,0%,100%,0.55)]";
 
-  
   const { user } = useAuth();
 
   const [menu, setMenu] = useState(true);
@@ -54,7 +53,10 @@ const HeaderContainer = () => {
                 }`}
       </style>
       <section>
-        <LoginContainer disabled={login} handleLogin={handleLogin} />
+        <LoginContainer
+          disabled={login}
+          handleLogin={handleLogin}
+        />
       </section>
       <header
         className={`
@@ -63,31 +65,31 @@ const HeaderContainer = () => {
                 `}
       >
         <div
-          className="max-w-[70rem] grid items-center justify-center min-[1040px]:justify-normal 
+          className='max-w-[70rem] grid items-center justify-center min-[1040px]:justify-normal 
                     w-full grid-cols-[auto_1fr] mx-auto text-white gap-x-4 min-[1040px]:flex 
-                    max-w-screen-base"
+                    max-w-screen-base'
         >
           <a
-            href="/"
-            className="ml-4 transition-transform duration-300 hover:scale-125"
-            title="Ir a la página principal"
-            aria-label="Ir a la página principal"
+            href='/'
+            className='ml-4 transition-transform duration-300 hover:scale-125'
+            title='Ir a la página principal'
+            aria-label='Ir a la página principal'
           >
             <img
-              src="/LOGOCIIS.svg"
-              alt="Logo del CIIS XXV"
-              width="112"
-              height="112"
-              loading="lazy"
-              decoding="async"
-              draggable="false"
+              src='/LOGOCIIS.svg'
+              alt='Logo del CIIS XXVI'
+              width='150'
+              height='150'
+              loading='lazy'
+              decoding='async'
+              draggable='false'
             />
           </a>
           <nav
-            id=":R16:"
+            id=':R16:'
             className={`col-span-full overflow-x-auto row-[2/3] grid min-[1040px]:block ${openMenu} transition-[grid-template-rows]`}
           >
-            <ul className="flex flex-col items-center overflow-x-auto overflow-y-hidden min-[1040px]:overflow-hidden min-[1040px]:flex-row">
+            <ul className='flex flex-col items-center overflow-x-auto overflow-y-hidden min-[1040px]:overflow-hidden min-[1040px]:flex-row'>
               {navItems.map((item) => (
                 <NavItem
                   key={item.name}
@@ -98,7 +100,7 @@ const HeaderContainer = () => {
               ))}
             </ul>
           </nav>
-          <div className="flex items-center gap-4 mr-4 min-[1040px]:ml-auto">
+          <div className='flex items-center gap-4 mr-4 min-[1040px]:ml-auto'>
             {/*!user ? (
               <button
                 onClick={handleLogin}
@@ -122,14 +124,14 @@ const HeaderContainer = () => {
             )*/}
             <button
               onClick={handleMenuToggle}
-              className="flex items-center justify-center py-2 min-[1040px]:hidden"
+              className='flex items-center justify-center py-2 min-[1040px]:hidden'
               aria-expanded={menu}
-              aria-controls=":R16:"
-              title="Mostrar Menú"
-              aria-label="Mostrar menú"
+              aria-controls=':R16:'
+              title='Mostrar Menú'
+              aria-label='Mostrar menú'
             >
-              <div className="flex items-center justify-center p-2 cursor-pointer group">
-                <div className="space-y-2">
+              <div className='flex items-center justify-center p-2 cursor-pointer group'>
+                <div className='space-y-2'>
                   <span
                     className={`block h-1 w-8 origin-center rounded-full bg-white/60 transition-transform ease-in-out
                                             ${menu ? "" : "translate-y-1.5 rotate-45"}
@@ -151,7 +153,7 @@ const HeaderContainer = () => {
 };
 
 export const Header = () => (
-    <AuthProvider>
-      <HeaderContainer />
-    </AuthProvider>
-)
+  <AuthProvider>
+    <HeaderContainer />
+  </AuthProvider>
+);

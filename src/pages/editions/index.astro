@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { CURRENT_CIIS_EDITION } from "../../config";
 import MainContainer from "../../views/main/MainContainer.astro";
 import Speakers from "../../views/speakers/Speakers.astro";
 import SponsorsContainer from "../../views/sponsors/SponsorsContainer.astro";
@@ -7,6 +8,6 @@ import TopicsContainer from "../../views/topics/TopicsContainer.astro";
 import GalleryContainer from "../../views/gallery/GalleryContainer.astro"
 ---
 
-<Layout title="Ediciones | Congreso Internacional XXV de Informática y Sistemas">
+<Layout title=`Ediciones | Congreso Internacional de Informática y Sistemas ${CURRENT_CIIS_EDITION}`>
     <GalleryContainer/>
 </Layout>

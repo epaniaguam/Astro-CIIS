@@ -1,8 +1,9 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { CURRENT_CIIS_EDITION } from "../../config";
 import ResetPassword from "../../views/resetpwd/components/ResetPassword";
 ---
 
-<Layout title="Restauración de contraseña | Congreso Internacional XXV de Informática y Sistemas">
+<Layout title=`Restauración de contraseña | Congreso Internacional de Informática y Sistemas ${CURRENT_CIIS_EDITION}`>
     <ResetPassword client:only />
 </Layout>

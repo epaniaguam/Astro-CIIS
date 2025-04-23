@@ -1,0 +1,50 @@
+.text-color {
+  color: var(--color-text-secondary-default);
+}
+
+.text-color-secondary {
+  color: var(--color-text-secondary-active);
+}
+.opacityImage {
+  opacity: 0.4;
+}
+
+.border-default {
+  border-color: var(--color-border-primary-default);
+}
+
+.border-default:hover {
+  border-color: var(--color-border-primary-hover);
+}
+
+.border-default:active {
+  border-color: var(--color-border-primary-active);
+}
+
+.bg-active {
+  background-color: transparent;
+}
+
+.bg-active:active {
+  background-color: var(--color-bg-surface-primary-active);
+}
+
+article:hover img.opacityImage {
+  opacity: 0.6;
+}
+
+.animation-view {
+  animation: portfolio both;
+  animation-timeline: view();
+  animation-range-start: cover 0%;
+  animation-range-end: contain 40%;
+}
+
+@keyframes portfolio {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -5,6 +5,8 @@ export const prerender = false
 
 import { CURRENT_CIIS_EDITION } from "../config"; // Añadir importación
 
+import { CURRENT_CIIS_EDITION } from "../config"; // Añadir importación
+
 interface Props {
   title?: string;
   description?: string;
@@ -37,7 +39,7 @@ const {
 
     <meta
       name='title'
-      content={`Congreso Internacional de Informática y Sistemas ${CURRENT_CIIS_EDITION}`}
+      content={title}
     />
     <meta
       name='description'
@@ -49,7 +51,7 @@ const {
     />
     <meta
       name='author'
-      content='Riem, Butcher, Ardev y Raul'
+      content='Danilo, Elian, Oscar, Hernan'
     />
 
     <!-- Contenido de busqueda -->
@@ -67,7 +69,7 @@ const {
     />
     <meta
       name='DC.title'
-      content={`Congreso Internacional de Informática y Sistemas ${CURRENT_CIIS_EDITION}`}
+      content={title}
     />
     {/* Cambiado */}
     <meta
@@ -76,7 +78,7 @@ const {
     />
     <meta
       name='DC.creator'
-      content='Riem, Butcher, Ardev y Raul'
+      content='Danilo, Elian, Oscar, Hernan'
     />
 
     <!-- Open Graph / Facebook -->
@@ -90,33 +92,11 @@ const {
     />
     <meta
       property='og:title'
-      content={`Congreso Internacional de Informática y Sistemas ${CURRENT_CIIS_EDITION}`}
+      content={title}
     />
-    {/* Cambiado */}
     <meta
       property='og:description'
       content={description}
-    />
-    <meta
-      property='og:image'
-      content='/LogoRedes.jpg'
-    />
-    <!-- Open Graph / Facebook -->
-    <meta
-      property='og:type'
-      content='website'
-    />
-    <meta
-      property='og:url'
-      content='https://www.ciistacna.com/'
-    />
-    <meta
-      property='og:title'
-      content='Congreso Internacional de Informática y Sistemas XXVI'
-    />
-    <meta
-      property='og:description'
-      content='Descubre las últimas innovaciones en informática y sistemas en el Congreso Internacional XXVI. ¡Únete a los líderes de la industria!'
     />
     <meta
       property='og:image'
@@ -134,7 +114,7 @@ const {
     />
     <meta
       property='twitter:title'
-      content={`Congreso Internacional de Informática y Sistemas ${CURRENT_CIIS_EDITION}`}
+      content={title}
     />
     {/* Cambiado */}
     <meta
@@ -147,7 +127,14 @@ const {
     />
   </head>
   <body>
-    <Header client:only />
+    {
+      /*
+
+		TODO: Activar cuando se defina el header oficial
+		<Header client:only />
+			
+		*/
+    }
     <slot />
     <Footer />
   </body>

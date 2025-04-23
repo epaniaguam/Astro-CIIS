@@ -1,7 +1,9 @@
 ---
-import Footer from "../views/footer/Footer.astro";
-import { Header } from "../views/header/HeaderContainer";
-export const prerender = false;
+import Footer from '../views/footer/Footer.astro';
+import { Header } from '../views/header/HeaderContainer';
+export const prerender = false
+
+import { CURRENT_CIIS_EDITION } from "../config"; // Añadir importación
 
 import { CURRENT_CIIS_EDITION } from "../config"; // Añadir importación
 
@@ -69,6 +71,7 @@ const {
       name='DC.title'
       content={title}
     />
+    {/* Cambiado */}
     <meta
       name='DC.subject'
       content='Congreso de informática, sistemas, ciberseguridad, inteligencia artificial'
@@ -113,6 +116,7 @@ const {
       property='twitter:title'
       content={title}
     />
+    {/* Cambiado */}
     <meta
       property='twitter:description'
       content={description}
@@ -131,7 +135,6 @@ const {
 			
 		*/
     }
-
     <slot />
     <Footer />
   </body>

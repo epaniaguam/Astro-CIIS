@@ -1,9 +1,7 @@
 ---
-import Footer from '../views/footer/Footer.astro';
-import { Header } from '../views/header/HeaderContainer';
-export const prerender = false
-
-import { CURRENT_CIIS_EDITION } from "../config"; // Añadir importación
+import Footer from "../views/footer/Footer.astro";
+import { Header } from "../views/header/HeaderContainer";
+export const prerender = false;
 
 import { CURRENT_CIIS_EDITION } from "../config"; // Añadir importación
 
@@ -19,112 +17,54 @@ const {
 ---
 
 <!doctype html>
-<html lang='es'>
+<html lang="es">
   <head>
-    <meta charset='UTF-8' />
-    <meta
-      name='viewport'
-      content='width=device-width, initial-scale=1.0'
-    />
-    <meta
-      name='generator'
-      content={Astro.generator}
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <link
-      rel='icon'
-      type='image/x-icon'
-      href='/favicon.ico'
-    />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
     <meta
-      name='title'
-      content={title}
+      name="keywords"
+      content="Congreso Internacional de Informática, Sistemas, tecnología, innovación tecnológica, profesionales de TI, informática, sistemas empresariales, ciberseguridad, inteligencia artificial, Big Data, conferencias de tecnología, networking en TI, transformación digital, software, hardware, automatización, desarrollo de software, expertos en informática, líderes de la industria tecnológica, ingeniería de software, ingeniería informática, ingeniería de sistemas, ingenieros en TI, ingeniería tecnológica, soluciones tecnológicas, ingeniería de datos"
     />
     <meta
-      name='description'
-      content={description}
-    />
-    <meta
-      name='keywords'
-      content='Congreso Internacional de Informática, Sistemas, tecnología, innovación tecnológica, profesionales de TI, informática, sistemas empresariales, ciberseguridad, inteligencia artificial, Big Data, conferencias de tecnología, networking en TI, transformación digital, software, hardware, automatización, desarrollo de software, expertos en informática, líderes de la industria tecnológica, ingeniería de software, ingeniería informática, ingeniería de sistemas, ingenieros en TI, ingeniería tecnológica, soluciones tecnológicas, ingeniería de datos'
-    />
-    <meta
-      name='author'
-      content='Danilo, Elian, Oscar, Hernan'
+      name="author"
+      content="Danilo, Elian, Oscar, Alexis, Dennis, Hernan"
     />
 
     <!-- Contenido de busqueda -->
-    <meta
-      name='robots'
-      content='index, follow'
-    />
-    <link
-      rel='canonical'
-      href='https://www.ciistacna.com/'
-    />
-    <meta
-      name='language'
-      content='es'
-    />
-    <meta
-      name='DC.title'
-      content={title}
-    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.ciistacna.com/" />
+    <meta name="language" content="es" />
+    <meta name="DC.title" content={title} />
     {/* Cambiado */}
     <meta
-      name='DC.subject'
-      content='Congreso de informática, sistemas, ciberseguridad, inteligencia artificial'
+      name="DC.subject"
+      content="Congreso de informática, sistemas, ciberseguridad, inteligencia artificial"
     />
     <meta
-      name='DC.creator'
-      content='Danilo, Elian, Oscar, Hernan'
+      name="DC.creator"
+      content="Danilo, Elian, Oscar, Alexis, Dennis, Hernan"
     />
 
     <!-- Open Graph / Facebook -->
-    <meta
-      property='og:type'
-      content='website'
-    />
-    <meta
-      property='og:url'
-      content='https://www.ciistacna.com/'
-    />
-    <meta
-      property='og:title'
-      content={title}
-    />
-    <meta
-      property='og:description'
-      content={description}
-    />
-    <meta
-      property='og:image'
-      content='/LogoRedes.jpg'
-    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.ciistacna.com/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/LogoRedes.jpg" />
 
     <!-- Twitter -->
-    <meta
-      property='twitter:card'
-      content='summary_large_image'
-    />
-    <meta
-      property='twitter:url'
-      content='https://www.ciistacna.com/'
-    />
-    <meta
-      property='twitter:title'
-      content={title}
-    />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.ciistacna.com/" />
+    <meta property="twitter:title" content={title} />
     {/* Cambiado */}
-    <meta
-      property='twitter:description'
-      content={description}
-    />
-    <meta
-      property='twitter:image'
-      content='/LogoRedes.jpg'
-    />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="/LogoRedes.jpg" />
   </head>
   <body>
     {

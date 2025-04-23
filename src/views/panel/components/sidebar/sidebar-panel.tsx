@@ -84,7 +84,7 @@ const SideBarPanel = ({ nameUser, emailUser }: SideBarProps) => {
             <div
               className={`flex ${expanded ? "justify-between" : "justify-center"} items-center`}
             >
-              <strong className="text-xl">{expanded ? "CIIS XXV" : ""}</strong>
+              <strong className="text-xl">{expanded ? `CIIS XXVI` : ""}</strong>
               <button
                 onClick={() => setExpanded(!expanded)}
                 className="p-1.5 rounded-lg bg-gray-900 hover:bg-gray-700"
@@ -152,7 +152,7 @@ const SideBarPanel = ({ nameUser, emailUser }: SideBarProps) => {
                     onClick={() => {
                       if (transparent) setExpanded(!expanded);
                     }} 
-                    disabled={new Date("2024-11-11T20:30:00Z") > new Date()}
+                    disabled={new Date("2025-11-11T20:30:00Z") > new Date()}
                   />
                 </ul>
               </SideBarProvider>

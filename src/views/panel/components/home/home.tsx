@@ -5,7 +5,7 @@ import { useAuth } from "../../../../hooks/use-auth";
 import { status } from "../../services/status";
 
 const Home = () => {
-  const revisionDate = "19/10/2024";
+  const revisionDate = "19/10/2025";
   const [inscriptionPostmaster, setInscriptionPostmaster] = useState<any | null>(null);
   const [inscriptionCiis, setInscriptionCiis] = useState<any | null>(null);
   const { user } = useAuth();
@@ -22,15 +22,15 @@ const Home = () => {
       <CardHome
         title="Próximo Evento"
         cardTitle="Congreso Internacional de informática y sistemas"
-        secondTitle="Edición XXV"
-        dateEvent="11 de noviembre de 2024"
+        secondTitle="Edición XXVI"
+        dateEvent="11 de noviembre de 2025"
       >
         <div className="flex justify-center">
           <div className="w-56 sm:w-64 overflow-hidden rounded-sm transition-transform active:scale-125 sm:active:scale-150 z-10">
             <img
               className="w-full object-cover select-none"
               src="/PortadaCIIS.webp"
-              alt="Ficha del CIIS XXV"
+              alt="Ficha del CIIS XXVI"
               loading="lazy"
               decoding="async"
               width={1600}

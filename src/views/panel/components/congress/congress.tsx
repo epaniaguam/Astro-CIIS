@@ -148,7 +148,7 @@ const Congress = () => {
           <div className="text-3xl text-center">
             <p> <strong className="text-4xl">11</strong> al <strong className="text-4xl">15</strong></p>
             <p className="uppercase font-semibold">noviembre</p>
-            <p className="font-semibold">2024</p>
+            <p className="font-semibold">2025</p>
           </div>
           <span className="text-slate-300 block mt-2">
             Este evento reúne a expertos y profesionales de todo el mundo para

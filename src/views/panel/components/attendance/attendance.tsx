@@ -164,38 +164,38 @@ const Attendance = () => {
             <div className="mt-8 flex justify-evenly gap-2 flex-col sm:flex-row">
               <AttendanceProvider index={indexContext}>
                 <ButtonAttendance
-                  description="Lunes (11/11/2024)"
-                  index={"2024-11-11"}
+                  description="Lunes (11/11/2025)"
+                  index={"2025-11-11"}
                   onClick={() => {
-                    setIndexContext("2024-11-11");
+                    setIndexContext("2025-11-11");
                   }}
                 />
                 <ButtonAttendance
-                  description="Martes (12/11/2024)"
-                  index={"2024-11-12"}
+                  description="Martes (12/11/2025)"
+                  index={"2025-11-12"}
                   onClick={() => {
-                    setIndexContext("2024-11-12");
+                    setIndexContext("2025-11-12");
                   }}
                 />
                 <ButtonAttendance
-                  description="Miercoles (13/11/2024)"
-                  index={"2024-11-13"}
+                  description="Miercoles (13/11/2025)"
+                  index={"2025-11-13"}
                   onClick={() => {
-                    setIndexContext("2024-11-13");
+                    setIndexContext("2025-11-13");
                   }}
                 />
                 <ButtonAttendance
-                  description="Jueves (14/11/2024)"
-                  index={"2024-11-14"}
+                  description="Jueves (14/11/2025)"
+                  index={"2025-11-14"}
                   onClick={() => {
-                    setIndexContext("2024-11-14");
+                    setIndexContext("2025-11-14");
                   }}
                 />
                 <ButtonAttendance
-                  description="Viernes (15/11/2024)"
-                  index={"2024-11-15"}
+                  description="Viernes (15/11/2025)"
+                  index={"2025-11-15"}
                   onClick={() => {
-                    setIndexContext("2024-11-15");
+                    setIndexContext("2025-11-15");
                   }}
                 />
               </AttendanceProvider>

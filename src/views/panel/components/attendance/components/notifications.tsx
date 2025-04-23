@@ -1,6 +1,6 @@
 const Notifications = ({ attendances, planCiis } : { attendances: number, planCiis: string }) => {
   const totalAttendances = 17;
-  // const endEvent = new Date() > new Date("2024-11-15T23:00:00Z");
+  // const endEvent = new Date() > new Date("2025-11-15T23:00:00Z");
 
   return (
     <div className="mt-8 text-base sm:text-lg font-semibold text-[#7AAEF1] pb-16">

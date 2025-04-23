@@ -105,7 +105,7 @@ const HeaderContainer = () => {
               <button
                 onClick={handleLogin}
                 className={`flex items-center cursor-pointer gap-2 rounded-lg px-4 py-[10px] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed ${bgButton} text-white ${shadowButton} ${shadowButtonHover} hover:scale-110 ml-auto font-medium`}
-                title="Únete al CIIS XXV"
+                title="Únete al CIIS XXVI"
                 aria-label="Inscripción Congreso Internacional de Informática y Sistemas"
               >
                 Iniciar Sesión
@@ -116,7 +116,7 @@ const HeaderContainer = () => {
                   location.href = "/dashboard";
                 }}
                 className={`flex items-center cursor-pointer gap-2 rounded-lg px-4 py-[10px] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed ${bgButton} text-white ${shadowButton} ${shadowButtonHover} hover:scale-110 ml-auto font-medium`}
-                title="Únete al CIIS XXV"
+                title="Únete al CIIS XXVI"
                 aria-label="Inscripción Congreso Internacional de Informática y Sistemas"
               >
                 Panel

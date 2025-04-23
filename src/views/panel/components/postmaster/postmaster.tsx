@@ -36,7 +36,7 @@ const PostMaster = () => {
         />
         <TransparentsCards
           title_aside="13"
-          title_main="Setiembre 2024"
+          title_main="Setiembre 2025"
           icono={<IconClock size={48} color="#7AAEF1" />}
         />
       </div>
@@ -46,7 +46,7 @@ const PostMaster = () => {
             <img
               className="w-full object-cover select-none"
               src="/FichaPostmaster.webp"
-              alt="Ficha del CIIS XXV"
+              alt="Ficha del CIIS XXVI"
               loading="lazy"
               decoding="async"
               width={1600}
@@ -89,7 +89,7 @@ const PostMaster = () => {
           <div className="text-3xl text-center">
             <p> <strong className="text-4xl">11</strong> al <strong className="text-4xl">15</strong></p>
             <p className="uppercase font-semibold">noviembre</p>
-            <p className="font-semibold">2024</p>
+            <p className="font-semibold">2025</p>
           </div>
           <span className="text-slate-300 block mt-2">
             Este evento reúne a expertos y profesionales de todo el mundo para

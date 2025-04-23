@@ -50,14 +50,14 @@ export default dataPonents;
 // const data = [
 //   {
 //     day: "lunes",
-//     date: "2024-11-11T22:00:00.000Z",
+//     date: "2025-11-11T22:00:00.000Z",
 //     early: [],
 //     late: [
 //         {
 //             id: 7,
 //             topic: "PONENCIA 1",
-//             start: "2024-11-11T22:00:00.000Z",
-//             end: "2024-11-11T23:00:00.000Z",
+//             start: "2025-11-11T22:00:00.000Z",
+//             end: "2025-11-11T23:00:00.000Z",
 //             type: "Ponencia",
 //             isMorning: false,
 //             speaker: "Claudio Meneses Villegas",
@@ -70,13 +70,13 @@ export default dataPonents;
 //   },
 //   {
 //       day: "martes",
-//       date: "2024-11-12T15:00:00.000Z",
+//       date: "2025-11-12T15:00:00.000Z",
 //       early: [
 //           {
 //               id: 12,
 //               topic: "PONENCIA 3",
-//               start: "2024-11-12T15:00:00.000Z",
-//               end: "2024-11-12T16:00:00.000Z",
+//               start: "2025-11-12T15:00:00.000Z",
+//               end: "2025-11-12T16:00:00.000Z",
 //               type: "Ponencia",
 //               isMorning: true,
 //               speaker: "Ricardo Pérez Sánchez",
@@ -88,8 +88,8 @@ export default dataPonents;
 //           {
 //               id: 20,
 //               topic: "PONENCIA 4",
-//               start: "2024-11-12T16:00:00.000Z",
-//               end: "2024-11-12T17:00:00.000Z",
+//               start: "2025-11-12T16:00:00.000Z",
+//               end: "2025-11-12T17:00:00.000Z",
 //               type: "Ponencia",
 //               isMorning: true,
 //               speaker: "Roxana Flores Quispe",

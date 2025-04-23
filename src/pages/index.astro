@@ -1,22 +1,21 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import MainContainer from '../views/main/MainContainer.astro';
-import TopicsContainer from '../views/topics/TopicsContainer.astro';
-import Speakers from '../views/speakers/Speakers.astro';
-import FeriaTecnologicaContainer from '../views/feria-tecnologica/FeriaTecnologicaContainer.astro'
-import SponsorsContainer from '../views/sponsors/SponsorsContainer.astro'
-import AboutContainer from '../views/about/AboutContainer.astro';
-import Schedules from '../views/schedules/Schedules';
+import Layout from "../layouts/Layout.astro";
+import MainContainer from "../views/main/MainContainer.astro";
+import TopicsContainer from "../views/topics/TopicsContainer.astro";
+// import Speakers from '../views/speakers/Speakers.astro';
+import Speakers from "../views/speakers/Speakers";
+import FeriaTecnologicaContainer from "../views/feria-tecnologica/FeriaTecnologicaContainer.astro";
+import SponsorsContainer from "../views/sponsors/SponsorsContainer.astro";
+import AboutContainer from "../views/about/AboutContainer.astro";
+import Schedules from "../views/schedules/Schedules";
 ---
 
-
-
-<Layout title="Congreso Internacional XXV de Informática y Sistemas">
-    <MainContainer />
-    <AboutContainer />
-    <TopicsContainer />
-    <Speakers />
-    <Schedules client:load/>
-    <FeriaTecnologicaContainer />
-    <SponsorsContainer />
+<Layout title='Congreso Internacional XXV de Informática y Sistemas'>
+  <MainContainer />
+  <AboutContainer />
+  <TopicsContainer />
+  <Speakers client:load />
+  <Schedules client:load />
+  <FeriaTecnologicaContainer />
+  <SponsorsContainer />
 </Layout>

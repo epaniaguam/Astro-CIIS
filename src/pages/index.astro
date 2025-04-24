@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import MainContainer from "../views/main/MainContainer.astro";
 import TopicsContainer from "../views/topics/TopicsContainer.astro";
-import Speakers from "../views/speakers/Speakers.astro";
+import Speakers from "../views/speakers/Speakers.tsx";
 import FeriaTecnologicaContainer from "../views/feria-tecnologica/FeriaTecnologicaContainer.astro";
 import SponsorsContainer from "../views/sponsors/SponsorsContainer.astro";
 import AboutContainer from "../views/about/AboutContainer.astro";
@@ -13,7 +13,7 @@ import Schedules from "../views/schedules/Schedules";
   <MainContainer />
   <AboutContainer />
   <TopicsContainer />
-  <Speakers />
+  <Speakers client:load />
   <Schedules client:load />
   <FeriaTecnologicaContainer />
   <SponsorsContainer />

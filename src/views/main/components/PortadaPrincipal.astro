@@ -6,7 +6,7 @@ import Counter from "./Counter/Counter";
 import TitleMain from "./Counter/TitleMain.astro";
 import FlagsContainer from "./FlagsContainer.astro";
 import Label from "./Label.astro";
-const eventDate = '2025-11-17T13:30:00Z';
+const eventDate = "2025-11-17T13:30:00Z";
 ---
 
 <div class='m-auto h-auto w-full pt-24 z-50 relative sm:h-dvh'>
@@ -25,13 +25,21 @@ const eventDate = '2025-11-17T13:30:00Z';
     />
   </video>
 
-  <div class="flex justify-center items-center mb-12">
-    <img src="/LOGOCIIS.svg" alt="Logo CIIS" class="w-60 md:w-72 h-auto">
+  <div class='flex justify-center items-center mb-12'>
+    <img
+      src='/LOGOCIIS.svg'
+      alt='Logo CIIS'
+      class='w-60 md:w-72 h-auto'
+    />
   </div>
-  
-  <dir class="mb-5 md:text-xl">
-    <Label description="Del 17 al 21 de noviembre del 2025">
-      <IconStar size={5} fill="#7AAEF1" slot="icon" />
+
+  <dir class='mb-5 text-base md:text-3xl'>
+    <Label description='Del 17 al 21 de noviembre del 2025'>
+      <IconStar
+        size={5}
+        fill='#7AAEF1'
+        slot='icon'
+      />
     </Label>
   </dir>
 
@@ -39,72 +47,79 @@ const eventDate = '2025-11-17T13:30:00Z';
     description='Explora los avances más recientes en informática y sistemas en este evento internacional.'
   />
 
-  <Counter client:load eventDate={eventDate} />
+  <Counter
+    client:load
+    eventDate={eventDate}
+  />
 
   <div class='flex justify-center my-8 text-focus-in'>
     <SocialNetwork />
   </div>
+  <div class='flex justify-center my-8 text-focus-in'>
+    <a href='/registro/planes'>
+      <Button description='¡Inscríbete ahora!' />
+    </a>
+  </div>
 
-  {/*
+  {
+    /*
   
   TODO: Activar cuando se defina las nacionalidades de los ponentes
   <FlagsContainer />
 
-  */}
-
-
+  */
+  }
 </div>
 
-  <style>
-    .calculate-height {
-      height: calc(100dvh - 224px);
-    }
+<style>
+  .calculate-height {
+    height: calc(100dvh - 224px);
+  }
 
-    .text-primary {
-      background-image: var(--accent-gradient-primary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-size: 400%;
-      background-position: 0%;
-    }
+  .text-primary {
+    background-image: var(--accent-gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
 
-    .text-secondary {
-      background-image: var(--accent-gradient-secondary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-size: 400%;
-      background-position: 0%;
-    }
+  .text-secondary {
+    background-image: var(--accent-gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
 
-    .text-focus-in {
-      -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53)
-        both;
-      animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-    }
+  .text-focus-in {
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+      both;
+    animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  }
 
-    @-webkit-keyframes text-focus-in {
-      0% {
-        -webkit-filter: blur(12px);
-        filter: blur(12px);
-        opacity: 0;
-      }
-      100% {
-        -webkit-filter: blur(0px);
-        filter: blur(0px);
-        opacity: 1;
-      }
+  @-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
     }
-    @keyframes text-focus-in {
-      0% {
-        -webkit-filter: blur(12px);
-        filter: blur(12px);
-        opacity: 0;
-      }
-      100% {
-        -webkit-filter: blur(0px);
-        filter: blur(0px);
-        opacity: 1;
-      }
+    100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
     }
-  </style>
-</div>
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+</style>

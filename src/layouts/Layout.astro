@@ -5,6 +5,8 @@ export const prerender = false;
 
 import { CURRENT_CIIS_EDITION } from "../config"; // Añadir importación
 
+import { CURRENT_CIIS_EDITION } from "../config"; // Añadir importación
+
 interface Props {
   title?: string;
   description?: string;
@@ -27,8 +29,7 @@ const {
 
     <meta name="title" content={title} />
     <meta name="description" content={description} />
-    <meta
-      name="keywords"
+    <meta name="keywords"
       content="Congreso Internacional de Informática, Sistemas, tecnología, innovación tecnológica, profesionales de TI, informática, sistemas empresariales, ciberseguridad, inteligencia artificial, Big Data, conferencias de tecnología, networking en TI, transformación digital, software, hardware, automatización, desarrollo de software, expertos en informática, líderes de la industria tecnológica, ingeniería de software, ingeniería informática, ingeniería de sistemas, ingenieros en TI, ingeniería tecnológica, soluciones tecnológicas, ingeniería de datos"
     />
     <meta
@@ -62,6 +63,7 @@ const {
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://www.ciistacna.com/" />
     <meta property="twitter:title" content={title} />
+
     {/* Cambiado */}
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content="/LogoRedes.jpg" />

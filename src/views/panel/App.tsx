@@ -7,7 +7,7 @@ export default function App() {
   return (
     <React.StrictMode>
       <AuthProvider>
-        <BrowserRouter basename="/dashboard">
+        <BrowserRouter basename='/dashboard'>
           <AuthMiddleware>
             <PanelContainer />
           </AuthMiddleware>

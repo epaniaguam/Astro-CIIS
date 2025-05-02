@@ -1,9 +1,7 @@
 ---
-import Footer from '../views/footer/Footer.astro';
-import { Header } from '../views/header/HeaderContainer';
-export const prerender = false
-
-import { CURRENT_CIIS_EDITION } from "../config"; // Añadir importación
+import Footer from "../views/footer/Footer.astro";
+import { Header } from "../views/header/HeaderContainer";
+export const prerender = false;
 
 import { CURRENT_CIIS_EDITION } from "../config"; // Añadir importación
 
@@ -131,8 +129,8 @@ const {
       /*
 
 		TODO: Activar cuando se defina el header oficial
-		<Header client:only />
-			
+    <Header client:only />
+    
 		*/
     }
     <slot />

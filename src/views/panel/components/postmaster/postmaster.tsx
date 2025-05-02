@@ -12,59 +12,71 @@ const PostMaster = () => {
     true; /* CON ESTA VARIABLE VAMOS MANEJAR EL ESTADO DEL BOTON*/
 
   return (
-    <div className="p-2 sm:p-4 h-dvh w-full bg-slate-950">
-      <div className="font-bold tracking-tighter mt-8 text-center select-none">
-        
-        <p className="uppercase text-3xl sm:text-4xl opacity-80">
-        <strong className="text-4xl sm:text-5xl opacity-95">XXI</strong> postmaster
+    <div className='p-2 sm:p-4 h-dvh w-full bg-slate-950'>
+      <div className='font-bold tracking-tighter mt-8 text-center select-none'>
+        <p className='uppercase text-3xl sm:text-4xl opacity-80'>
+          <strong className='text-4xl sm:text-5xl opacity-95'>XXI</strong>{" "}
+          postmaster
         </p>
-        <p className="uppercase text-3xl sm:text-4xl opacity-75">
+        <p className='uppercase text-3xl sm:text-4xl opacity-75'>
           Encuentro de egresados
-          
         </p>
       </div>
-      <div className="flex mt-6 w-full justify-center flex-col items-center xl:justify-evenly xl:flex-row">
+      <div className='flex mt-6 w-full justify-center flex-col items-center xl:justify-evenly xl:flex-row'>
         <TransparentsCards
-          title_main="auditorio central "
-          title_aside="de la UNJBG"
-          icono={<IconLocation size={48} color="#7AAEF1" />}
+          title_main='auditorio central '
+          title_aside='de la UNJBG'
+          icono={
+            <IconLocation
+              size={48}
+              color='#7AAEF1'
+            />
+          }
         />
         <TransparentsCards
-          title_aside="Certificado"
-          title_main="incluye"
-          icono={<IconCertificate size={48} color="#7AAEF1" />}
+          title_aside='Certificado'
+          title_main='incluye'
+          icono={
+            <IconCertificate
+              size={48}
+              color='#7AAEF1'
+            />
+          }
         />
         <TransparentsCards
-          title_aside="13"
-          title_main="Setiembre 2024"
-          icono={<IconClock size={48} color="#7AAEF1" />}
+          title_aside='13'
+          title_main='Setiembre 2024'
+          icono={
+            <IconClock
+              size={48}
+              color='#7AAEF1'
+            />
+          }
         />
       </div>
-      <div className="flex mt-8 lg:mt-12 items-center flex-col lg:flex-row gap-y-8 lg:gap-y-0">
-        <div className="flex-1 flex justify-center relative">
-          <div className="w-56 sm:w-64 overflow-hidden rounded-sm transition-transform hover:scale-110 active:scale-125 sm:active:scale-150 z-10">
+      <div className='flex mt-8 lg:mt-12 items-center flex-col lg:flex-row gap-y-8 lg:gap-y-0'>
+        <div className='flex-1 flex justify-center relative'>
+          <div className='w-56 sm:w-64 overflow-hidden rounded-sm transition-transform hover:scale-110 active:scale-125 sm:active:scale-150 z-10'>
             <img
-              className="w-full object-cover select-none"
-              src="/FichaPostmaster.webp"
-              alt="Ficha del CIIS XXV"
-              loading="lazy"
-              decoding="async"
+              className='w-full object-cover select-none'
+              src='/FichaPostmaster.webp'
+              alt='Ficha del CIIS XXV'
+              loading='lazy'
+              decoding='async'
               width={1600}
               height={900}
-              draggable="false"
+              draggable='false'
             />
           </div>
         </div>
-        <div className="flex-1 flex flex-col justify-center items-center gap-y-4 relative z-0">
+        <div className='flex-1 flex flex-col justify-center items-center gap-y-4 relative z-0'>
           <button
             className={`uppercase text-base sm:text-2xl rounded-full font-bold px-8 py-4 select-none transition-colors relative ${registerInCongress ? RegisterCongress : noRegisterCongress}`}
           >
-            {registerInCongress
-              ? "Evento finalizado"
-              : "Completar inscripción"}
+            {registerInCongress ? "Evento finalizado" : "Completar inscripción"}
           </button>
           {registerInCongress ? (
-            <span className="text-blue-400">
+            <span className='text-blue-400'>
               Muchas gracias por su participación, lo esperamos el próximo año.
             </span>
           ) : (

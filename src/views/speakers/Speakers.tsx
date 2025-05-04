@@ -33,7 +33,7 @@ function Speakers() {
   return (
     <section
       id='speakers'
-      className='pt-40 sm:pt-48'
+      className='pt-10 sm:py-20'
     >
       <div className='m-auto max-w-5xl pb-16'>
         <h2 className='text-4xl font-bold text-center text-secondary sm:text-6xl slide-top'>

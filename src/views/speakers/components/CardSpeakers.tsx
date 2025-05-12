@@ -41,8 +41,12 @@ function SpeakerCard({
   alt = "Ponente Anónimo",
   nationality = "Peru",
 }) {
+  const shouldBlur = nameSpeaker.toLowerCase().includes("ponente");
+
   return (
-    <div className='m-auto animation-view h-full'>
+    <div
+      className={`m-auto animation-view h-full ${shouldBlur ? "blur-sm" : ""}`}
+    >
       <article className='text-color w-72 p-4 rounded-[28px] active:bg-[#0e0e20] hover:scale-105 transition-transform border border-default relative h-full'>
         <div className='w-full h-full'>
           <figure className='w-full mb-2 overflow'>

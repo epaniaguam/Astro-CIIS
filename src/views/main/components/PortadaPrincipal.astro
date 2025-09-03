@@ -9,22 +9,25 @@ import Label from "./Label.astro";
 const eventDate = "2025-11-17T13:30:00Z";
 ---
 
-<div class='m-auto h-auto w-full pt-24 z-50 relative sm:h-dvh'>
-  <video
-    id='myVideo'
-    class='opacity-30 absolute inset-0 w-full h-full object-cover backdrop-blur-sm -z-30'
-    autoplay
-    muted
-    loop
-    controlslist='nodownload nofullscreen noremoteplayback'
-    disablepictureinpicture
-  >
-    <source
-      src='video1.mp4'
-      type='video/mp4'
-    />
-  </video>
+<div
+  class="w-full relative sm:h-dvh min-h-screen flex flex-col justify-center items-center px-6 overflow-hidden"
+>
+  <div>
+    <video
+      id="myVideo"
+      class="opacity-30 absolute inset-0 w-full h-full object-cover backdrop-blur-sm -z-30"
+      autoplay
+      muted
+      loop
+      controlslist="nodownload nofullscreen noremoteplayback"
+      disablepictureinpicture
+    >
+      <source src="video1.mp4" type="video/mp4" />
+    </video>
 
+    {
+      /*
+  TODO: NUNCA DEBIO EXISTIR XD
   <div class='flex justify-center items-center mb-12'>
     <img
       src='/LOGOCIIS.svg'
@@ -33,29 +36,30 @@ const eventDate = "2025-11-17T13:30:00Z";
     />
   </div>
 
-  <dir class='mb-5 text-base md:text-2xl'>
-    <Label description='Del 10 al 14 de noviembre del 2025'>
-      <IconStar
-        size={5}
-        fill='#7AAEF1'
-        slot='icon'
-      />
-    </Label>
-  </dir>
+  */
+    }
 
-  <TitleMain
-    description='Explora los avances más recientes en informática y sistemas en este evento internacional.'
-  />
+    <dir class="mb-5 text-base md:text-lg">
+      <Label description="Del 10 al 14 de noviembre del 2025">
+        <IconStar size={5} fill="#7AAEF1" slot="icon" />
+      </Label>
+    </dir>
 
-  <Counter
-    client:load
-    eventDate={eventDate}
-  />
+    <TitleMain
+      description="Explora los avances más recientes en informática y sistemas en este evento internacional."
+    />
 
-  <div class='flex justify-center my-8 text-focus-in'>
-    <SocialNetwork />
-  </div>
+    <div class="mb-4 text-focus-in">
+      <Counter client:load eventDate={eventDate} />
+    </div>
 
+    <div class="flex justify-center my-8 text-focus-in">
+      <SocialNetwork />
+    </div>
+
+    {
+      /*
+  TODO: NUNCA DEBIO EXISTIR XD
   <div class='flex justify-center mt-6'>
     <a
       href='/editions'
@@ -65,14 +69,18 @@ const eventDate = "2025-11-17T13:30:00Z";
     </a>
   </div>
 
-  {
-    /*
+  */
+    }
+
+    {
+      /*
   
   TODO: Activar cuando se defina las nacionalidades de los ponentes
   <FlagsContainer />
-
+  
   */
-  }
+    }
+  </div>
 </div>
 
 <style>

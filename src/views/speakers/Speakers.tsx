@@ -17,6 +17,8 @@ function Speakers() {
       })
       .then((data) => {
         setSpeakers(data);
+        // TODO: ELIMINAR
+        console.log(`RESDATA: `, data)
         setLoading(false);
       })
       .catch((err) => {
@@ -43,6 +45,7 @@ function Speakers() {
       <div className='m-auto max-w-5xl grid gap-y-8 grid-cols-1 lg:grid-cols-3 sm:grid-cols-2'>
         {speakers?.map((speaker) => (
           <SpeakerCard
+            key={speaker.id}
             nameSpeaker={`${speaker.degree} ${speaker.name} ${speaker.lastname}`}
             rolSpeaker={speaker.description}
             link_image={`${import.meta.env.PUBLIC_DOMAIN_BASE}/${speaker.avatar}`}

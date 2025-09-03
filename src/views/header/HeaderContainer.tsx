@@ -87,9 +87,10 @@ const HeaderContainer = () => {
           </a>
           <nav
             id=':R16:'
-            className={`col-span-full overflow-x-auto row-[2/3] grid min-[1040px]:block ${openMenu} transition-[grid-template-rows]`}
+            className={`col-span-full overflow-x-auto row-[2/3] grid min-[1040px]:block ${openMenu} transition-[grid-template-rows] flex-1`}
           >
-            <ul className='flex flex-col items-center overflow-x-auto overflow-y-hidden min-[1040px]:overflow-hidden min-[1040px]:flex-row'>
+            {/* TODO: CAMBIOS PARA CENTRAR MENU */}
+            <ul className='flex flex-col items-center overflow-x-auto overflow-y-hidden min-[1040px]:overflow-hidden min-[1040px]:flex-row min-[1040px]:justify-center w-full'>
               {navItems.map((item) => (
                 <NavItem
                   key={item.name}
@@ -101,7 +102,8 @@ const HeaderContainer = () => {
             </ul>
           </nav>
           <div className='flex items-center gap-4 mr-4 min-[1040px]:ml-auto'>
-            {/*!user ? (
+            {/* TODO: ACTIVADO - REVISAR */}
+            {!user ? (
               <button
                 onClick={handleLogin}
                 className={`flex items-center cursor-pointer gap-2 rounded-lg px-4 py-[10px] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed ${bgButton} text-white ${shadowButton} ${shadowButtonHover} hover:scale-110 ml-auto font-medium`}
@@ -121,7 +123,7 @@ const HeaderContainer = () => {
               >
                 Panel
               </button>
-            )*/}
+            )}
             <button
               onClick={handleMenuToggle}
               className='flex items-center justify-center py-2 min-[1040px]:hidden'

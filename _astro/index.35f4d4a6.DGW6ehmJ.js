@@ -1,0 +1,1 @@
+const o="_dialog_qlgb3_1",a="_dialogContainer_qlgb3_19",l="_dialogIcon_qlgb3_24",g="_dialogMessage_qlgb3_30",s="_overlay_qlgb3_35",i={dialog:o,dialogContainer:a,dialogIcon:l,dialogMessage:g,overlay:s};export{i as s};

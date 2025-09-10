@@ -1,0 +1,1 @@
+const o="_dropzone_n5kq4_1",e="_borderIsNoDrag_n5kq4_10",r="_borderIsDrag_n5kq4_14",n="_borderSelected_n5kq4_18",t="_dzMessage_n5kq4_22",s="_dzImageOrIcon_n5kq4_30",d="_buttonUpload_n5kq4_36",_="_textDrag_n5kq4_47",a={dropzone:o,borderIsNoDrag:e,borderIsDrag:r,borderSelected:n,dzMessage:t,dzImageOrIcon:s,buttonUpload:d,textDrag:_};export{a as s};

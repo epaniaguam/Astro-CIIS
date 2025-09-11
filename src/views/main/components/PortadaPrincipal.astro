@@ -6,7 +6,7 @@ import Counter from "./Counter/Counter";
 import TitleMain from "./Counter/TitleMain.astro";
 import FlagsContainer from "./FlagsContainer.astro";
 import Label from "./Label.astro";
-const eventDate = "2025-11-17T13:30:00Z";
+const eventDate = "2025-11-10T21:00:00Z";
 ---
 
 <div
@@ -39,15 +39,17 @@ const eventDate = "2025-11-17T13:30:00Z";
   */
     }
 
-    <dir class="mb-5 text-base md:text-lg">
+    <dir class="mb-2 text-base md:text-lg mt-12">
       <Label description="Del 10 al 14 de noviembre del 2025">
         <IconStar size={5} fill="#7AAEF1" slot="icon" />
       </Label>
     </dir>
 
-    <TitleMain
-      description="Explora los avances más recientes en informática y sistemas en este evento internacional."
-    />
+    <TitleMain description="" />
+
+    <div class="mt-5">
+      <FlagsContainer />
+    </div>
 
     <div class="mb-4 text-focus-in">
       <Counter client:load eventDate={eventDate} />
@@ -55,6 +57,17 @@ const eventDate = "2025-11-17T13:30:00Z";
 
     <div class="flex justify-center my-8 text-focus-in">
       <SocialNetwork />
+      {/* 
+      TODO: TODAVIA NO SE ABRE LA INSCRIPCION
+      <a
+        href="/registro/planes"
+        class="font-title bg-gray-100/90 text-gray-900 border border-white/20 px-9 py-3 rounded-full font-bold text-lg tracking-widest cursor-pointer inline-block transition-all duration-500 ease-in-out shadow-lg"
+        tabindex="0"
+        style="opacity: 1; box-shadow: rgba(70, 90, 130, 0.55) 0px 16.484px 32.4734px, rgba(100, 120, 160, 0.45) 0px 0px 32.4734px; transform: translateY(-0.863321px) scale(1.02242); background-color: oklab(0.967 -0.000285348 -0.0029864 / 0.9); color: oklch(0.21 0.034 264.665); backdrop-filter: blur(0px);"
+      >
+        INSCRÍBETE AHORA
+      </a>
+      */}
     </div>
 
     {
@@ -76,7 +89,6 @@ const eventDate = "2025-11-17T13:30:00Z";
       /*
   
   TODO: Activar cuando se defina las nacionalidades de los ponentes
-  <FlagsContainer />
   
   */
     }

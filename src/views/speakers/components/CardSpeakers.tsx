@@ -42,7 +42,7 @@ function SpeakerCard({
   nationality = "Peru",
 }) {
   const shouldBlur = nameSpeaker.toLowerCase().includes("ponente");
-  // const shouldBlur = true;
+  // const shouldBlur = false;
 
   return (
     <div
@@ -71,7 +71,7 @@ function SpeakerCard({
           </figure>
           <div className='relative'>
             {/* TODO: ACTIVAR CUANDO SE TENGA DATOS COMPLETOS DE LOS PONENTES */}
-            {/* <h4 className='font-bold tracking-wider text-lg max-w-52 text-balance'>
+            <h4 className='font-bold tracking-wider text-lg max-w-52 text-balance'>
               {truncateString(nameSpeaker)}
             </h4>
             
@@ -82,17 +82,17 @@ function SpeakerCard({
             </div> 
             <div className='absolute right-0 bottom-0 top-2'>
               {getFlagComponent(nationality)}
-            </div> */}
+            </div>
 
             {/* TODO: BORRAR CUANDO SE TENGA DATOS COMPLETOS DE LOS PONENTES */}
-            <div className="flex items-center justify-between bg-white/5 backdrop-blur-sm rounded-lg py-2 shadow-sm max-w-52 mx-auto">
+            {/* <div className="flex items-center justify-between bg-white/5 backdrop-blur-sm rounded-lg py-2 shadow-sm max-w-52 mx-auto">
               <h4 className="font-semibold text-base text-balance truncate text-white">
                 {truncateString(nameSpeaker)}
               </h4>
               <span className="ml-3 flex items-center">
                 {getFlagComponent(nationality)}
               </span>
-            </div>
+            </div> */}
           </div>
         </div>
       </article>

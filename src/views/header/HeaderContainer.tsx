@@ -104,7 +104,7 @@ const HeaderContainer = () => {
           </nav>
           <div className='flex items-center gap-4 mr-4 min-[1040px]:ml-auto'>
             {/* TODO: ACTIVADO - REVISAR */}
-            {!user ? (
+            {/* {!user ? (
               <button
                 onClick={handleLogin}
                 className={`flex items-center cursor-pointer gap-2 rounded-lg px-4 py-[10px] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed ${bgButton} text-white ${shadowButton} ${shadowButtonHover} hover:scale-110 ml-auto font-medium`}
@@ -124,7 +124,18 @@ const HeaderContainer = () => {
               >
                 Panel
               </button>
-            )}
+            )} */}
+
+            {/* TODO: TEMPORAL HASTA QUE HABILITEN LA INSCRIPCION */}
+            <button
+              className={`hidden sm:flex items-center cursor-pointer gap-2 rounded-lg px-4 py-[10px] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed ${bgButton} text-white ${shadowButton} ${shadowButtonHover} hover:scale-110 ml-auto font-medium`}
+              title="Únete al CIIS XXV"
+              aria-label="Inscripción Congreso Internacional de Informática y Sistemas"
+            >
+              Próximamente
+            </button>
+            <button className="sm:hidden flex items-center cursor-pointer gap-2 rounded-lg px-4 py-[10px] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed ${bgButton} text-white ${shadowButton} ${shadowButtonHover} hover:scale-110 ml-auto font-medium"></button>
+
             <button
               onClick={handleMenuToggle}
               className='flex items-center justify-center py-2 min-[1040px]:hidden'

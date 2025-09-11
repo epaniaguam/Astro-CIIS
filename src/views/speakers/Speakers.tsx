@@ -17,8 +17,6 @@ function Speakers() {
       })
       .then((data) => {
         setSpeakers(data);
-        // TODO: ELIMINAR
-        console.log(`RESDATA: `, data)
         setLoading(false);
       })
       .catch((err) => {

@@ -6,25 +6,28 @@ import Counter from "./Counter/Counter";
 import TitleMain from "./Counter/TitleMain.astro";
 import FlagsContainer from "./FlagsContainer.astro";
 import Label from "./Label.astro";
-const eventDate = "2025-11-17T13:30:00Z";
+const eventDate = "2025-11-10T21:00:00Z";
 ---
 
-<div class='m-auto h-auto w-full pt-24 z-50 relative sm:h-dvh'>
-  <video
-    id='myVideo'
-    class='opacity-30 absolute inset-0 w-full h-full object-cover backdrop-blur-sm -z-30'
-    autoplay
-    muted
-    loop
-    controlslist='nodownload nofullscreen noremoteplayback'
-    disablepictureinpicture
-  >
-    <source
-      src='video1.mp4'
-      type='video/mp4'
-    />
-  </video>
+<div
+  class="w-full relative sm:h-dvh min-h-screen flex flex-col justify-center items-center px-6 overflow-hidden"
+>
+  <div>
+    <video
+      id="myVideo"
+      class="opacity-30 absolute inset-0 w-full h-full object-cover backdrop-blur-sm -z-30"
+      autoplay
+      muted
+      loop
+      controlslist="nodownload nofullscreen noremoteplayback"
+      disablepictureinpicture
+    >
+      <source src="video1.mp4" type="video/mp4" />
+    </video>
 
+    {
+      /*
+  TODO: NUNCA DEBIO EXISTIR XD
   <div class='flex justify-center items-center mb-12'>
     <img
       src='/LOGOCIIS.svg'
@@ -33,29 +36,43 @@ const eventDate = "2025-11-17T13:30:00Z";
     />
   </div>
 
-  <dir class='mb-5 text-base md:text-2xl'>
-    <Label description='Del 10 al 14 de noviembre del 2025'>
-      <IconStar
-        size={5}
-        fill='#7AAEF1'
-        slot='icon'
-      />
-    </Label>
-  </dir>
+  */
+    }
 
-  <TitleMain
-    description='Explora los avances más recientes en informática y sistemas en este evento internacional.'
-  />
+    <dir class="mb-2 text-base md:text-lg mt-12">
+      <Label description="Del 10 al 14 de noviembre del 2025">
+        <IconStar size={5} fill="#7AAEF1" slot="icon" />
+      </Label>
+    </dir>
 
-  <Counter
-    client:load
-    eventDate={eventDate}
-  />
+    <TitleMain description="" />
 
-  <div class='flex justify-center my-8 text-focus-in'>
-    <SocialNetwork />
-  </div>
+    <div class="mt-5">
+      <FlagsContainer />
+    </div>
 
+    <div class="mb-4 text-focus-in">
+      <Counter client:load eventDate={eventDate} />
+    </div>
+
+    <div class="flex justify-center my-8 text-focus-in">
+      <SocialNetwork />
+      {/* 
+      TODO: TODAVIA NO SE ABRE LA INSCRIPCION
+      <a
+        href="/registro/planes"
+        class="font-title bg-gray-100/90 text-gray-900 border border-white/20 px-9 py-3 rounded-full font-bold text-lg tracking-widest cursor-pointer inline-block transition-all duration-500 ease-in-out shadow-lg"
+        tabindex="0"
+        style="opacity: 1; box-shadow: rgba(70, 90, 130, 0.55) 0px 16.484px 32.4734px, rgba(100, 120, 160, 0.45) 0px 0px 32.4734px; transform: translateY(-0.863321px) scale(1.02242); background-color: oklab(0.967 -0.000285348 -0.0029864 / 0.9); color: oklch(0.21 0.034 264.665); backdrop-filter: blur(0px);"
+      >
+        INSCRÍBETE AHORA
+      </a>
+      */}
+    </div>
+
+    {
+      /*
+  TODO: NUNCA DEBIO EXISTIR XD
   <div class='flex justify-center mt-6'>
     <a
       href='/editions'
@@ -65,14 +82,17 @@ const eventDate = "2025-11-17T13:30:00Z";
     </a>
   </div>
 
-  {
-    /*
+  */
+    }
+
+    {
+      /*
   
   TODO: Activar cuando se defina las nacionalidades de los ponentes
-  <FlagsContainer />
-
+  
   */
-  }
+    }
+  </div>
 </div>
 
 <style>

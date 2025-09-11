@@ -6,10 +6,10 @@ const { description }: Props = Astro.props;
 import { CURRENT_CIIS_EDITION } from "../../../../config";
 ---
 
-<div class='m-auto max-w-5xl flex flex-col gap-6 text-focus-in'>
+<div class='m-auto max-w-[720px] flex flex-col gap-6 text-focus-in'>
   <h1 class='text-5xl text-center text-secondary tracking-tighter sm:text-7xl'>
     <p class='text-secondary font-bold'>
-      {CURRENT_CIIS_EDITION} Congreso <strong class='font-bold text-primary'
+      Congreso <strong class='font-bold text-primary'
         >Internacional</strong
       >
     </p>
@@ -19,10 +19,10 @@ import { CURRENT_CIIS_EDITION } from "../../../../config";
     </p>
 
     <p class='text-secondary font-bold'>
-      <strong class='font-bold text-primary'>Sistemas</strong>
+      <strong class='font-bold text-primary'>Sistemas</strong> {CURRENT_CIIS_EDITION}
     </p>
   </h1>
-  <span class='text-center text-slate-100/75'>{description}</span>
+  <!-- <span class='text-center text-slate-100/75'>{description}</span> -->
 </div>
 
 <style>

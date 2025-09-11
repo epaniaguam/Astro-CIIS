@@ -43,6 +43,7 @@ function Speakers() {
       <div className='m-auto max-w-5xl grid gap-y-8 grid-cols-1 lg:grid-cols-3 sm:grid-cols-2'>
         {speakers?.map((speaker) => (
           <SpeakerCard
+            key={speaker.id}
             nameSpeaker={`${speaker.degree} ${speaker.name} ${speaker.lastname}`}
             rolSpeaker={speaker.description}
             link_image={`${import.meta.env.PUBLIC_DOMAIN_BASE}/${speaker.avatar}`}
@@ -51,6 +52,35 @@ function Speakers() {
           />
         ))}
       </div>
+      {/* TODO: ELIMINAR CUANDO ESTEN LISTOS LOS PONENTES */}
+      <div className="mt-14 text-center">
+        <p className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight leading-tight notice-pulse">
+          <span className="block">¡MUY PRONTO</span>
+          <span className="block">REVELAREMOS MÁS PONENTES!</span>
+        </p>
+        <div className="mt-4 h-1 w-48 mx-auto rounded-full underline-pan" />
+      </div>
+      <style>{`
+            @media (prefers-reduced-motion: reduce) {
+              .notice-pulse, .underline-pan { animation: none !important; }
+            }
+            @keyframes noticePulse {
+              0%, 100% { transform: translateY(0); opacity: 0.96; }
+              50% { transform: translateY(-1px); opacity: 1; }
+            }
+            @keyframes underlinePan {
+              0% { background-position: 100% 50%; }
+              100% { background-position: 0% 50%; }
+            }
+            .notice-pulse { animation: noticePulse 3s ease-in-out infinite; }
+            .underline-pan {
+              background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(99,102,241,0.7) 50%, rgba(0,0,0,0) 100%);
+              background-size: 200% 100%;
+              background-position: 100% 50%;
+              animation: underlinePan 6s linear infinite alternate;
+            }
+          `}</style>
+      {/* TODO: ELIMINAR CUANDO ESTEN LISTOS LOS PONENTES */}
     </section>
   );
 }

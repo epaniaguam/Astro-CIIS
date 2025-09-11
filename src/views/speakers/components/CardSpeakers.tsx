@@ -42,10 +42,11 @@ function SpeakerCard({
   nationality = "Peru",
 }) {
   const shouldBlur = nameSpeaker.toLowerCase().includes("ponente");
+  // const shouldBlur = false;
 
   return (
     <div
-      className={`m-auto animation-view h-full ${shouldBlur ? "blur-sm" : ""}`}
+      className={`m-auto animation-view h-full ${shouldBlur ? "blur-[2px]" : ""}`}
     >
       <article className='text-color w-72 p-4 rounded-[28px] active:bg-[#0e0e20] hover:scale-105 transition-transform border border-default relative h-full'>
         <div className='w-full h-full'>
@@ -69,17 +70,29 @@ function SpeakerCard({
             />
           </figure>
           <div className='relative'>
+            {/* TODO: ACTIVAR CUANDO SE TENGA DATOS COMPLETOS DE LOS PONENTES */}
             <h4 className='font-bold tracking-wider text-lg max-w-52 text-balance'>
               {truncateString(nameSpeaker)}
             </h4>
+            
             <div className='flex-wrap max-w-52 mt-2'>
               <p className='break-words text-sm text-color-secondary text-pretty'>
                 {truncateString(rolSpeaker, 100)}
               </p>
-            </div>
+            </div> 
             <div className='absolute right-0 bottom-0 top-2'>
               {getFlagComponent(nationality)}
             </div>
+
+            {/* TODO: BORRAR CUANDO SE TENGA DATOS COMPLETOS DE LOS PONENTES */}
+            {/* <div className="flex items-center justify-between bg-white/5 backdrop-blur-sm rounded-lg py-2 shadow-sm max-w-52 mx-auto">
+              <h4 className="font-semibold text-base text-balance truncate text-white">
+                {truncateString(nameSpeaker)}
+              </h4>
+              <span className="ml-3 flex items-center">
+                {getFlagComponent(nationality)}
+              </span>
+            </div> */}
           </div>
         </div>
       </article>

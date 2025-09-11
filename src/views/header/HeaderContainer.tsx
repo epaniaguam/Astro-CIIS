@@ -97,6 +97,7 @@ const HeaderContainer = () => {
                   name={item.name}
                   icon={item.icon}
                   href={item.href}
+                  target={item.target ?? undefined}
                 />
               ))}
             </ul>

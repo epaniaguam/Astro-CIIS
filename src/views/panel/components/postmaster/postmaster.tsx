@@ -15,7 +15,7 @@ const PostMaster = () => {
     <div className='p-2 sm:p-4 h-dvh w-full bg-slate-950'>
       <div className='font-bold tracking-tighter mt-8 text-center select-none'>
         <p className='uppercase text-3xl sm:text-4xl opacity-80'>
-          <strong className='text-4xl sm:text-5xl opacity-95'>XXI</strong>{" "}
+          <strong className='text-4xl sm:text-5xl opacity-95'>XXII</strong>{" "}
           postmaster
         </p>
         <p className='uppercase text-3xl sm:text-4xl opacity-75'>
@@ -24,7 +24,7 @@ const PostMaster = () => {
       </div>
       <div className='flex mt-6 w-full justify-center flex-col items-center xl:justify-evenly xl:flex-row'>
         <TransparentsCards
-          title_main='auditorio central '
+          title_main='auditorio de ESIC'
           title_aside='de la UNJBG'
           icono={
             <IconLocation
@@ -44,8 +44,8 @@ const PostMaster = () => {
           }
         />
         <TransparentsCards
-          title_aside='13'
-          title_main='Setiembre 2024'
+          title_aside='22'
+          title_main='Agosto 2025'
           icono={
             <IconClock
               size={48}
@@ -60,7 +60,7 @@ const PostMaster = () => {
             <img
               className='w-full object-cover select-none'
               src='/FichaPostmaster.webp'
-              alt='Ficha del CIIS XXV'
+              alt='Ficha del CIIS XXVI'
               loading='lazy'
               decoding='async'
               width={1600}

@@ -73,7 +73,7 @@ const Congress = () => {
           }
         />
         <TransparentsCards
-          title_aside='17 al 21'
+          title_aside='10 al 14'
           title_main='Noviembre 2025'
           icono={
             <IconClock

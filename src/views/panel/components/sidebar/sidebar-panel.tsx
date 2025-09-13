@@ -79,15 +79,15 @@ const SideBarPanel = ({ nameUser, emailUser }: SideBarProps) => {
             : "bg-transparent"
         }`}
       >
-        <div className="flex flex-col justify-between h-full p-4 pb-4">
-          <div className="space-y-4">
+        <div className='flex flex-col justify-between h-full p-4 pb-4'>
+          <div className='space-y-4'>
             <div
               className={`flex ${expanded ? "justify-between" : "justify-center"} items-center`}
             >
-              <strong className="text-xl">{expanded ? "CIIS XXV" : ""}</strong>
+              <strong className='text-xl'>{expanded ? "CIIS XXVI" : ""}</strong>
               <button
                 onClick={() => setExpanded(!expanded)}
-                className="p-1.5 rounded-lg bg-gray-900 hover:bg-gray-700"
+                className='p-1.5 rounded-lg bg-gray-900 hover:bg-gray-700'
               >
                 {expanded ? (
                   <IconChevronLeft size={6} />
@@ -100,15 +100,15 @@ const SideBarPanel = ({ nameUser, emailUser }: SideBarProps) => {
               <SideBarProvider expanded={expanded}>
                 <ul>
                   <ItemSideBar
-                    to="/"
-                    description="Inicio"
+                    to='/'
+                    description='Inicio'
                     icon={<IconHome size={5} />}
                     index={0}
                     onClick={() => {
                       if (transparent) setExpanded(!expanded);
-                    }} 
+                    }}
                   />
-                  <ItemSideBar
+                  {/* <ItemSideBar
                     to="/postmaster"
                     description="PostMaster"
                     icon={<IconGraduation size={5} />}
@@ -116,17 +116,17 @@ const SideBarPanel = ({ nameUser, emailUser }: SideBarProps) => {
                     onClick={() => {
                       if (transparent) setExpanded(!expanded);
                     }} 
-                  />
+                  /> */}
                   <ItemSideBar
-                    to="/ciis"
-                    description="Congreso"
+                    to='/ciis'
+                    description='Congreso'
                     icon={<IconAuditorium size={5} />}
                     index={2}
                     onClick={() => {
                       if (transparent) setExpanded(!expanded);
-                    }} 
+                    }}
                   />
-                  <ItemSideBar
+                  {/* <ItemSideBar
                     to="/workshops"
                     description="Talleres"
                     icon={<IconBriefcase size={5} />}
@@ -134,17 +134,17 @@ const SideBarPanel = ({ nameUser, emailUser }: SideBarProps) => {
                     onClick={() => {
                       if (transparent) setExpanded(!expanded);
                     }}
-                  />
+                  /> */}
                   <ItemSideBar
-                    to="/account"
-                    description="Cuenta"
+                    to='/account'
+                    description='Cuenta'
                     icon={<IconUser size={5} />}
                     index={4}
                     onClick={() => {
                       if (transparent) setExpanded(!expanded);
-                    }} 
+                    }}
                   />
-                  <ItemSideBar
+                  {/* <ItemSideBar
                     to="/attendance"
                     description="Asistencia"
                     icon={<IconCheckList size={5} />}
@@ -153,36 +153,36 @@ const SideBarPanel = ({ nameUser, emailUser }: SideBarProps) => {
                       if (transparent) setExpanded(!expanded);
                     }} 
                     disabled={new Date("2024-11-11T20:30:00Z") > new Date()}
-                  />
+                  /> */}
                 </ul>
               </SideBarProvider>
             )}
           </div>
 
           {!(transparent && !expanded) && (
-            <div className="flex justify-between items-center">
+            <div className='flex justify-between items-center'>
               <div
                 className={`flex ${!expanded ? "gap-x-0 items-end" : "gap-x-2 items-center"} justify-center`}
               >
                 {loading ? (
-                  <div className="w-8 h-8 border-4 border-blue-400 border-t-transparent border-solid rounded-full animate-spin"></div>
+                  <div className='w-8 h-8 border-4 border-blue-400 border-t-transparent border-solid rounded-full animate-spin'></div>
                 ) : (
                   <img
                     src={avatarUrl}
-                    alt="Avatar del usuario"
-                    className="rounded-md"
-                    loading="lazy"
-                    decoding="async"
-                    draggable="false"
+                    alt='Avatar del usuario'
+                    className='rounded-md'
+                    loading='lazy'
+                    decoding='async'
+                    draggable='false'
                   />
                 )}
                 <div
                   className={`text-base flex flex-col ${!expanded ? "invisible w-0" : "visible"}`}
                 >
-                  <p className="capitalize">
+                  <p className='capitalize'>
                     {AbreviationNameUser(nameUser, 24)}
                   </p>
-                  <span className="text-xs text-slate-400">
+                  <span className='text-xs text-slate-400'>
                     {AbreviationNameUser(emailUser, 26)}
                   </span>
                 </div>

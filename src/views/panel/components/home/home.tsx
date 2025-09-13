@@ -23,7 +23,7 @@ const Home = () => {
         title="Próximo Evento"
         cardTitle="Congreso Internacional de informática y sistemas"
         secondTitle="Edición XXVI"
-        dateEvent="10 de noviembre de 2025"
+        dateEvent="10 al 14 de noviembre de 2025"
       >
         <div className="flex justify-center">
           <div className="w-56 sm:w-64 overflow-hidden rounded-sm transition-transform active:scale-125 sm:active:scale-150 z-10">

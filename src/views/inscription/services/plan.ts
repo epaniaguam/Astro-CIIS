@@ -3,8 +3,8 @@ export const plans = [
         plan:"publicogeneral",
         title: "Público General",
         description: "Todo el mundo es bienvenido",
-        cost: 100,
-        costOriginal: 120,
+        cost: 120,
+        costOriginal: 140,
         src: "/generalpublic.jpg",
         benefits: {
             b1: "Se otorgará el certificado de 120 horas",
@@ -15,8 +15,8 @@ export const plans = [
         plan:"delegaciones",
         title: "Delegaciones",
         description: "Para estudiantes de universidades invitadas",
-        cost: 80,
-        costOriginal: 100,
+        cost: 100,
+        costOriginal: 120,
         src: "/delegation.jpg",
         benefits: {
             b1: "Se otorgará el certificado de 120 horas",
@@ -51,7 +51,7 @@ export const plans = [
         plan:"estudiantesesis",
         title: "Estudiantes ESIS",
         description: "Para estudiantes de nuestra escuela profesional",
-        cost: 30,
+        cost: 35,
         costOriginal: 50,
         src: "/student.jpg",
         benefits: {

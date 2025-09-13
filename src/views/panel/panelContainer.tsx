@@ -10,11 +10,11 @@ import Attendance from "./components/attendance/attendance";
 
 const routes = [
   { path: "/", element: <Home />  },
-  { path: "/postmaster", element: <PostMaster />  },
+  // { path: "/postmaster", element: <PostMaster />  },
   { path: "/ciis", element: <Congress />  },
-  { path: "/workshops", element: <Workshops />  },
+  // { path: "/workshops", element: <Workshops />  },
   { path: "/account", element: <Account />  },
-  { path: "/attendance", element: <Attendance />  },
+  // { path: "/attendance", element: <Attendance />  },
 ]
 
 const PanelContainer = () => {

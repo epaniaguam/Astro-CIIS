@@ -25,22 +25,19 @@ function Speakers() {
       });
   }, []);
 
-  if (loading) return <p className='text-center'>Cargando ponentes...</p>;
-  if (error) return <p className='text-center text-red-500'>{error}</p>;
+  if (loading) return <p className="text-center">Cargando ponentes...</p>;
+  if (error) return <p className="text-center text-red-500">{error}</p>;
   if (speakers.length === 0)
-    return <p className='text-center'>No hay ponentes disponibles.</p>;
+    return <p className="text-center">No hay ponentes disponibles.</p>;
 
   return (
-    <section
-      id='speakers'
-      className='pt-10 sm:py-20'
-    >
-      <div className='m-auto max-w-5xl pb-16'>
-        <h2 className='text-4xl font-bold text-center text-secondary sm:text-6xl slide-top'>
-          Conoce a nuestros <span className='text-primary'>Ponentes</span>
+    <section id="speakers" className="pt-10 sm:py-20">
+      <div className="m-auto max-w-5xl pb-16">
+        <h2 className="text-4xl font-bold text-center text-secondary sm:text-6xl slide-top">
+          Conoce a nuestros <span className="text-primary">Ponentes</span>
         </h2>
       </div>
-      <div className='m-auto max-w-5xl grid gap-y-8 grid-cols-1 lg:grid-cols-3 sm:grid-cols-2'>
+      <div className="m-auto max-w-5xl grid gap-y-8 grid-cols-1 lg:grid-cols-3 sm:grid-cols-2">
         {speakers?.map((speaker) => (
           <SpeakerCard
             key={speaker.id}
@@ -49,6 +46,7 @@ function Speakers() {
             link_image={`${import.meta.env.PUBLIC_DOMAIN_BASE}/${speaker.avatar}`}
             alt={`Imagen del ponente ${speaker.degree} ${speaker.name} ${speaker.lastname}`}
             nationality={speaker.nationality}
+            socialNetwork={speaker.socialNetwork}
           />
         ))}
       </div>

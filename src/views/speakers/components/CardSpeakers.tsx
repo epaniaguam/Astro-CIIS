@@ -52,7 +52,7 @@ function SpeakerCard({
       : null;
   return (
     <div
-      className={`m-auto animation-view h-full ${shouldBlur ? "blur-[2px]" : ""}`}
+      className={m-auto animation-view h-full ${shouldBlur ? "blur-[2px]" : ""}}
     >
       <a
         href={url || "#"}

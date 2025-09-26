@@ -90,12 +90,11 @@ function SpeakerCard({
                 <span className="p-1">{getFlagComponent(nationality)}</span>
               </h4>
 
-
-  <div className="mt-2 max-w-full">
-    <p className="w-full break-words text-sm text-color-secondary text-pretty">
-      {truncateString(rolSpeaker, 100)}
-    </p>
-  </div>
+              <div className="mt-2 max-w-full">
+                <p className="w-full break-words text-sm text-color-secondary text-pretty">
+                  {truncateString(rolSpeaker, 100)}
+                </p>
+              </div>
 
               {/* Bandera según la nacionalidad */}
               <div className="absolute right-0 bottom-0 top-2"></div>

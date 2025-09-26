@@ -1,0 +1,118 @@
+---
+interface Props {
+  props?: string;
+}
+
+const { props }: Props = Astro.props;
+---
+
+<svg
+  class={props}
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  version="1.0"
+  width="32"
+  height="32"
+  viewBox="-45 -45 220 162"
+  id="svg2"
+>
+  <defs id="defs58"></defs>
+
+  <rect
+    width="220"
+    height="162"
+    x="-45"
+    y="-45"
+    fill="#ffffff"
+    stroke="#000000"
+    stroke-width="2"
+    rx="15"
+    ry="15"
+    id="rect4"
+  >
+  </rect>
+
+  <path
+    d="M 45,-18 L 198,-18 M 45,18 L 198,18 M -45,54 L 198,54 M -45,90 L 198,90"
+    style="fill:none;stroke:#75aadb;stroke-width:18;stroke-opacity:1"
+    id="path6"></path>
+
+  <g
+    style="fill:#fcd116;stroke:#000000;stroke-width:0.60000002;stroke-miterlimit:20"
+    id="sun"
+  >
+    <g id="4wavyrays">
+      <g id="2wavyrays">
+        <g
+          transform="matrix(0.9238795,0.3826834,-0.3826834,0.9238795,0,0)"
+          id="wavyray"
+        >
+          <path
+            d="M 0,0 L 6,12 C -2,25 7,27 0,33 C 3,25 -4,28 -3,13"
+            id="path12"></path>
+          <path d="M 0,11 C -2,24 4.5,28 0,33" style="fill:none" id="path14"
+          ></path>
+        </g>
+        <use transform="scale(-1,-1)" xlink:href="#wavyray"></use>
+      </g>
+      <use transform="matrix(0,1,-1,0,0,0)" xlink:href="#2wavyrays"></use>
+    </g>
+    <use
+      transform="matrix(0.7071068,0.7071068,-0.7071068,0.7071068,0,0)"
+      xlink:href="#4wavyrays"></use>
+
+    <g id="4straightrays">
+      <g id="2straightrays">
+        <path d="M 0,0 L 6,0 L 0,33 L -6,0 L 0,0 L 0,33" id="straightray"
+        ></path>
+        <use transform="scale(-1,-1)" xlink:href="#straightray"></use>
+      </g>
+      <use transform="matrix(0,1,-1,0,0,0)" xlink:href="#2straightrays"></use>
+    </g>
+    <use
+      transform="matrix(0.7071068,0.7071068,-0.7071068,0.7071068,0,0)"
+      xlink:href="#4straightrays"></use>
+
+    <circle cx="0" cy="0" r="11" id="circle31"></circle>
+
+    <g transform="scale(0.1,0.1)" style="fill:#000000;stroke:none" id="face">
+      <g id="right">
+        <path
+          d="M 81,-44 C 74,-36 70,-50 45,-50 C 20,-50 16,-35 12,-38 C 8,-41 33,-59 41,-60 C 49,-61 72,-53 81,-44"
+          id="path35"></path>
+        <path
+          d="M 52,-35 C 59,-29 53,-16 46,-16 C 39,-16 26,-28 32,-36"
+          id="path37"></path>
+        <path
+          d="M 19,-26 C 20,-38 30,-40 46,-40 C 62,-40 69,-28 75,-25 C 68,-25 62,-35 46,-35 C 30,-35 30,-35 19,-25"
+          id="path39"></path>
+        <path
+          d="M 22,-23 C 26,-29 31,-17 42,-17 C 53,-17 59,-20 66,-25 C 73,-30 56,-13 45,-13 C 34,-13 19,-19 22,-23"
+          id="path41"></path>
+        <path
+          d="M 56,-17 C 69,-24 61,-34 56,-36 C 58,-34 66,-24 56,-17"
+          id="path43"></path>
+        <path
+          d="M 0,43 C 6,43 8,41 16,41 C 24,41 43,52 54,48 C 31,57 40,51 0,51 L -5,51"
+          id="path45"></path>
+        <path d="M 58,57 C 54,50 55,52 47,41 C 55,47 57,50 58,57" id="path47"
+        ></path>
+        <path
+          d="M 0,67 C 25,67 21,62 54,48 C 30,51 25,59 0,59 L -5,59"
+          id="path49"></path>
+        <path
+          d="M 0,30 C 7,30 9,25 17,25 C 25,25 36,28 41,32 C 42,33 38,24 30,23 C 22,22 25,9 16,7 C 16,11 19,10 20,16 C 20,21 11,21 9,16 C 11,24 5,24 0,24"
+          id="path51"></path>
+      </g>
+      <use transform="scale(-1,1)" xlink:href="#right"></use>
+      <path d="M 0,76 C -5,76 -18,79 0,79 C 18,79 5,76 0,76" id="path55"></path>
+
+      <path
+        d="M27,5H5c-1.657,0-3,1.343-3,3v1c0-1.657,1.343-3,3-3H27c1.657,0,3,1.343,3,3v-1c0-1.657-1.343-3-3-3Z"
+        fill="#fff"
+        opacity=".2"
+      >
+      </path>
+    </g>
+  </g>
+</svg>

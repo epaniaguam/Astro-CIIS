@@ -3,9 +3,11 @@ import {
   FlagBolivia,
   FlagBrazil,
   FlagChile,
+  FlagColombia,
   FlagCuba,
   FlagPeru,
   FlagSouthKorea,
+  FlagUruguay,
 } from "../../../components/icons/index.tsx";
 import "./CardSpeakers.css";
 
@@ -25,6 +27,10 @@ function getFlagComponent(nationality: string) {
       return <FlagBrazil />;
     case "Cuba":
       return <FlagCuba />;
+    case "Colombia":
+      return <FlagColombia />;
+    case "Uruguay":
+      return <FlagUruguay />;
     default:
       return null;
   }
@@ -42,8 +48,8 @@ function SpeakerCard({
   nationality = "Peru",
   socialNetwork = "",
 }) {
-  const shouldBlur = nameSpeaker.toLowerCase().includes("ponente");
-  // const shouldBlur = false;
+  // const shouldBlur = nameSpeaker.toLowerCase().includes("ponente");
+  const shouldBlur = false;
   const url =
     socialNetwork &&
     socialNetwork.trim() !== "" &&
@@ -52,7 +58,7 @@ function SpeakerCard({
       : null;
   return (
     <div
-      className={m-auto animation-view h-full ${shouldBlur ? "blur-[2px]" : ""}}
+      className={`m-auto animation-view h-full ${shouldBlur ? "blur-[2px]" : ""}`}
     >
       <a
         href={url || "#"}
@@ -83,11 +89,11 @@ function SpeakerCard({
             </figure>
             <div className="relative">
               {/* TODO: ACTIVAR cuando se tenga datos completos de los ponentes */}
-              <h4 className="font-bold tracking-wider text-lg max-w-auto text-balance flex items-center gap-2">
-                <span className="line-clamp-2">
+              <h4 className="font-bold tracking-wider text-lg max-w-auto text-balance flex items-center justify-between gap-2">
+                <span className="line-clamp-2 flex-1">
                   {truncateString(nameSpeaker)}
                 </span>
-                <span className="p-1">{getFlagComponent(nationality)}</span>
+                <span className="p-1 flex-shrink-0">{getFlagComponent(nationality)}</span>
               </h4>
 
               <div className="mt-2 max-w-full">

@@ -1,5 +1,5 @@
 ---
-import {FlagArgentina, FlagBolivia, FlagBrazil, FlagChile, FlagPeru, FlagSouthKorea, FlagCuba} from '../../../../public/icons/flags/index.astro'
+import {FlagArgentina, FlagBolivia, FlagBrazil, FlagChile, FlagPeru, FlagUruguay, FlagCuba, FlagColombia} from '../../../../public/icons/flags/index.astro'
 
 interface Props {
     props?: string
@@ -14,11 +14,14 @@ const {props}: Props = Astro.props
         <div class="flex gap-1 justify-center sm:gap-4">
             <FlagBrazil props='hover:scale-125 transition-transform' />
             <FlagArgentina props='hover:scale-125 transition-transform' />
+            <FlagColombia props='hover:scale-125 transition-transform' />
+            <FlagUruguay props='hover:scale-125 transition-transform' />
             <FlagChile props='hover:scale-125 transition-transform' />
+            <FlagCuba props='hover:scale-125 transition-transform' />   
             <FlagPeru props='hover:scale-125 transition-transform' />
-            <!-- <FlagSouthKorea props='hover:scale-125 transition-transform'/> -->
+            <!-- <FlagSouthKorea props='hover:scale-125 transition-transform' /> -->
             <!-- <FlagBolivia props='hover:scale-125 transition-transform' /> -->
-            <!-- <FlagCuba props='hover:scale-125 transition-transform' /> -->
+            
         </div>
     </div>
 </div>

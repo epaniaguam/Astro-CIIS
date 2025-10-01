@@ -1,1 +1,0 @@
-import{r}from"./index.DeEakWXg.js";import{b as e}from"./AuthContext.DrhUL17i.js";const u=()=>{const t=r.useContext(e);if(!t)throw new Error("useAuth debe ser usado dentro de un AuthProvider");return t};export{u};

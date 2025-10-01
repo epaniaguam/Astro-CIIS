@@ -20,7 +20,7 @@ export const DayScheduleSkeleton = () => {
   return (
     <div className="w-full flex flex-col rounded-xl sm:rounded-2xl gap-3 sm:gap-5">
       {/* Título del día skeleton */}
-      {/* <div className="h-8 sm:h-14 bg-slate-700/50 rounded w-64 mx-auto mb-2 sm:mb-4 animate-pulse" /> */}
+      <div className="h-8 bg-slate-700/50 rounded w-64 mx-auto mb-2 sm:mb-4 animate-pulse" />
       
       {/* Cards skeleton */}
       <CardSkeleton />

@@ -1,54 +1,116 @@
-# Astro Starter Kit: Basics
+# CIIS - Congreso Internacional de Informática y Sistemas
 
-```sh
-npm create astro@latest -- --template basics
+Sitio web oficial del Congreso Internacional de Informática y Sistemas (CIIS) desarrollado con Astro, React y Tailwind CSS.
+
+## 📋 Tabla de Contenidos
+
+- [Requisitos Previos](#requisitos-previos)
+- [Configuración del Proyecto](#configuración-del-proyecto)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Scripts Disponibles](#scripts-disponibles)
+- [Contribución](#contribución)
+
+## 📦 Requisitos Previos
+
+Antes de comenzar, asegúrate de tener instalado:
+
+- [Node.js](https://nodejs.org/) (versión 18 o superior)
+- [npm](https://www.npmjs.com/) o [yarn](https://yarnpkg.com/)
+
+## ⚙️ Configuración del Proyecto
+
+1. **Clona el repositorio:**
+   ```bash
+   git clone https://github.com/epaniaguam/Astro-CIIS.git
+   cd Astro-CIIS
+   ```
+
+2. **Instala las dependencias:**
+   ```bash
+   npm install
+   ```
+
+3. **Configura las variables de entorno:**
+   
+   Crea un archivo `.env` en la raíz del proyecto (si no existe) y añade las siguientes variables:
+   ```env
+   PUBLIC_DOMAIN_BASE=https://ciistacna.com/
+   ```
+   
+   > **Nota:** Las variables que comienzan con `PUBLIC_` están disponibles en el cliente. Para variables sensibles del servidor, usa variables sin el prefijo `PUBLIC_`.
+
+4. **Inicia el servidor de desarrollo:**
+   ```bash
+   npm run dev
+   ```
+
+   El sitio estará disponible en `http://localhost:4321`
+
+## 🏗️ Estructura del Proyecto
+
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
-├── public/
-│   └── favicon.svg
+├── public/                 # Archivos estáticos
+│   ├── ciis-history/      # Imágenes históricas del congreso
+│   ├── editions-image/    # Imágenes de ediciones
+│   ├── icons/            # Iconos
+│   ├── logos/            # Logotipos
+│   ├── speakers/         # Fotos de ponentes
+│   └── ...
 ├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── assets/           # Assets del proyecto
+│   ├── components/       # Componentes reutilizables
+│   ├── helpers/          # Funciones de ayuda
+│   ├── hooks/           # Custom React hooks
+│   ├── layouts/         # Layouts de páginas
+│   ├── middlewares/     # Middlewares
+│   ├── models/          # Tipos y modelos de datos
+│   ├── pages/           # Páginas del sitio (rutas)
+│   ├── styles/          # Estilos globales
+│   ├── utilities/       # Utilidades
+│   └── views/           # Vistas organizadas por funcionalidad
+│       ├── schedules/   # Cronogramas
+│       ├── speakers/    # Ponentes
+│       ├── sponsors/    # Patrocinadores
+│       ├── topics/      # Temas/Tópicos
+│       └── workshops/   # Talleres
+├── astro.config.mjs     # Configuración de Astro
+├── tailwind.config.mjs  # Configuración de Tailwind
+└── tsconfig.json        # Configuración de TypeScript
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🛠️ Scripts Disponibles
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+| Comando              | Descripción                                    |
+| :------------------- | :--------------------------------------------- |
+| `npm run dev`        | Inicia el servidor de desarrollo              |
+| `npm run start`      | Alias para `npm run dev`                      |
+| `npm run build`      | Construye el sitio para producción           |
+| `npm run preview`    | Previsualiza la build de producción          |
+| `npm run astro`      | Ejecuta comandos CLI de Astro                |
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Comandos de desarrollo útiles:
 
-## 🧞 Commands
+```bash
+# Verificar el código
+npm run astro check
 
-All commands are run from the root of the project, from a terminal:
+# Añadir integraciones
+npm run astro add tailwind
+npm run astro add react
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+# Obtener ayuda
+npm run astro -- --help
+```
 
-## 👀 Want to learn more?
+## 📝 Contribución
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/nueva-caracteristica`)
+3. Commit tus cambios (`git commit -am 'Agrega nueva característica'`)
+4. Push a la rama (`git push origin feature/nueva-caracteristica`)
+5. Abre un Pull Request
+
+---
+
+**Desarrollado con ❤️ para el Congreso Internacional de Informática y Sistemas - Tacna**

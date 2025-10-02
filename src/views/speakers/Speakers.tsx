@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import type Speaker from "./adapters/speakers";
 import SpeakerCard from "./components/CardSpeakers";
+import SpeakerSkeleton from "./components/SpeakerSkeleton";
 import "./Speakers.css";
 
 function Speakers() {
@@ -25,9 +26,8 @@ function Speakers() {
       });
   }, []);
 
-  if (loading) return <p className="text-center">Cargando ponentes...</p>;
   if (error) return <p className="text-center text-red-500">{error}</p>;
-  if (speakers.length === 0)
+  if (!loading && speakers.length === 0)
     return <p className="text-center">No hay ponentes disponibles.</p>;
 
   return (
@@ -38,26 +38,37 @@ function Speakers() {
         </h2>
       </div>
       <div className="m-auto max-w-5xl grid gap-y-8 grid-cols-1 lg:grid-cols-3 sm:grid-cols-2">
-        {speakers?.map((speaker) => (
-          <SpeakerCard
-            key={speaker.id}
-            nameSpeaker={`${speaker.degree} ${speaker.name} ${speaker.lastname}`}
-            rolSpeaker={speaker.description}
-            link_image={`${import.meta.env.PUBLIC_DOMAIN_BASE}/${speaker.avatar}`}
-            alt={`Imagen del ponente ${speaker.degree} ${speaker.name} ${speaker.lastname}`}
-            nationality={speaker.nationality}
-            socialNetwork={speaker.socialNetwork}
-          />
-        ))}
+        {loading ? (
+          <>
+            <SpeakerSkeleton />
+            <SpeakerSkeleton />
+            <SpeakerSkeleton />
+            <SpeakerSkeleton />
+            <SpeakerSkeleton />
+            <SpeakerSkeleton />
+          </>
+        ) : (
+          speakers?.map((speaker) => (
+            <SpeakerCard
+              key={speaker.id}
+              nameSpeaker={`${speaker.degree} ${speaker.name} ${speaker.lastname}`}
+              rolSpeaker={speaker.description}
+              link_image={`https://ciistacna.com/${speaker.avatar}`}
+              alt={`Imagen del ponente ${speaker.degree} ${speaker.name} ${speaker.lastname}`}
+              nationality={speaker.nationality}
+              socialNetwork={speaker.socialNetwork}
+            />
+          ))
+        )}
       </div>
       {/* TODO: ELIMINAR CUANDO ESTEN LISTOS LOS PONENTES */}
-      <div className="mt-14 text-center">
+      {/* <div className="mt-14 text-center">
         <p className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight leading-tight notice-pulse">
           <span className="block">¡MUY PRONTO</span>
           <span className="block">REVELAREMOS MÁS PONENTES!</span>
         </p>
         <div className="mt-4 h-1 w-48 mx-auto rounded-full underline-pan" />
-      </div>
+      </div> */}
       <style>{`
             @media (prefers-reduced-motion: reduce) {
               .notice-pulse, .underline-pan { animation: none !important; }

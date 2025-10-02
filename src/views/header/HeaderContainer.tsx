@@ -135,7 +135,7 @@ const HeaderContainer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Inscribete
+              Inscríbete
             </a>
             <button className="sm:hidden flex items-center cursor-pointer gap-2 rounded-lg px-4 py-[10px] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed ${bgButton} text-white ${shadowButton} ${shadowButtonHover} hover:scale-110 ml-auto font-medium"></button>
 

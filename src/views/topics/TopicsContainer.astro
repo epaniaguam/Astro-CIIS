@@ -14,27 +14,33 @@ import { topic } from "../topics/services/topics";
       >
     </h2>
 
+    {/*
+    
+    TODO: Activar cuando se defina las inscripciones
+    <a href="/registro/planes" class="cursor-pointer block mx-auto text-lg text-center text-white underline mt-4">
+      ¡Solo necesitas inscribirte para participar!
+    </a>
+
+    */}
+
     <a 
-      href="https://forms.gle/C9EpUkNN1YHT3reT6"
-      target="_blank"
+      href="/editions" 
       class="cursor-pointer block mx-auto text-lg text-center text-white hover:underline mt-4 animate-bounce"
     >
-      ¡Solo necesitas inscribirte para participar!
+      ¡Explora nuestras ediciones anteriores!
     </a>
     
     <div
-      class="relative mx-auto my-11 max-w-screen-base flex flex-wrap justify-center gap-7"
+      class="relative grid grid-cols-1 mx-auto sm:grid-cols-2 lg:grid-cols-3 gap-7 my-11 max-w-screen-base"
     >
       {
         topic.map((item) => (
-          <div class="w-full sm:w-[calc(50%-0.875rem)] lg:w-[calc(33.333%-1.167rem)]">
-            <Card
-              name={item.name}
-              description={item.description}
-              image1={item.image1}
-              image2={item.image2}
-            />
-          </div>
+          <Card
+            name={item.name}
+            description={item.description}
+            image1={item.image1}
+            image2={item.image2}
+          />
         ))
       }
     </div>

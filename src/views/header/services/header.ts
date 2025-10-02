@@ -19,7 +19,7 @@ const navItems: NavItemProps[] = [
     {
       name: "Call for Abstracts",
       icon: "M6 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.828a2 2 0 0 0-.586-1.414l-3.828-3.828A2 2 0 0 0 14.172 3H6zm7 1.5V8a1 1 0 0 0 1 1h2.5M8 13h8M8 17h4", // Paper académico con líneas
-      href: "https://forms.gle/qoDqbnk4LYd6KndC6",
+      href: "https://docs.google.com/forms/d/e/1FAIpQLSeLv9xEaWHNJTdJ18Qokwa8B_DkOuchxFJaJXepL6-W-vvcOg/viewform",
       target: "_blank",
     },
     {

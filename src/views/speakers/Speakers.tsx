@@ -62,13 +62,13 @@ function Speakers() {
         )}
       </div>
       {/* TODO: ELIMINAR CUANDO ESTEN LISTOS LOS PONENTES */}
-      <div className="mt-14 text-center">
+      {/* <div className="mt-14 text-center">
         <p className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight leading-tight notice-pulse">
           <span className="block">¡MUY PRONTO</span>
           <span className="block">REVELAREMOS MÁS PONENTES!</span>
         </p>
         <div className="mt-4 h-1 w-48 mx-auto rounded-full underline-pan" />
-      </div>
+      </div> */}
       <style>{`
             @media (prefers-reduced-motion: reduce) {
               .notice-pulse, .underline-pan { animation: none !important; }

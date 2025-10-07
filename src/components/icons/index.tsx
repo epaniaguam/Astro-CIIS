@@ -5,6 +5,7 @@ import FlagChile from "./FlagChile.tsx";
 import FlagCuba from "./FlagCuba.tsx";
 import FlagPeru from "./FlagPeru.tsx";
 import FlagSouthKorea from "./FlagSouthKorea.tsx";
+import FlagVenezuela from "../../../public/icons/flags/FlagVenezuela.astro";
 
 export {
   FlagArgentina,
@@ -14,4 +15,5 @@ export {
   FlagPeru,
   FlagSouthKorea,
   FlagCuba,
+  FlagVenezuela,
 };

@@ -30,10 +30,11 @@ const { titleStrong, items }: Props = Astro.props;
               alt={item.name}
               width={500}
               height={500}
-              class='object-cover w-full h-full aspect-square'
+              class='gallery-image object-cover w-full h-full aspect-square'
+              data-edition={titleStrong}
               draggable='false'
             />
-            <div class='absolute bottom-4 left-0 right-0 mx-auto max-w-64 slide-in-blurred-top text-center'>
+            <div class='absolute bottom-4 left-0 right-0 mx-auto max-w-64 slide-in-blurred-top text-center pointer-events-none'>
               <p class='flex items-center justify-center bg-[#2e2e2e]/70 gap-x-2 px-3 py-1 rounded-full break-words'>
                 <span class='text-[#7AAEF1] tracking-tighter'>{item.name}</span>
               </p>
@@ -55,6 +56,15 @@ const { titleStrong, items }: Props = Astro.props;
 
   .slide-in-blurred-top {
     display: none;
+  }
+
+  .gallery-image {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-image:hover {
+    transform: scale(1.05);
   }
 
   @-webkit-keyframes slide-top {

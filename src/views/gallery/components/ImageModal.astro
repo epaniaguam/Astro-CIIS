@@ -1,0 +1,366 @@
+---
+// Modal component for viewing images in fullscreen
+---
+
+<div id="image-modal" class="modal-overlay hidden">
+  <div class="modal-container">
+    <button id="close-modal" class="close-button" aria-label="Cerrar modal">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    
+    <button id="prev-image" class="nav-button prev-button" aria-label="Imagen anterior">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    
+    <div class="modal-content">
+      <img id="modal-image" src="" alt="" class="modal-image" />
+      <div class="modal-info">
+        <p id="modal-caption" class="modal-caption"></p>
+        <p id="modal-counter" class="modal-counter"></p>
+      </div>
+    </div>
+    
+    <button id="next-image" class="nav-button next-button" aria-label="Imagen siguiente">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<style>
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .modal-overlay.hidden {
+    display: none;
+  }
+
+  .modal-overlay.show {
+    display: flex;
+    opacity: 1;
+  }
+
+  .modal-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .modal-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .modal-image {
+    max-width: 100%;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 0.3s ease;
+  }
+
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .modal-info {
+    text-align: center;
+    color: white;
+  }
+
+  .modal-caption {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #7AAEF1;
+  }
+
+  .modal-counter {
+    font-size: 0.875rem;
+    color: #94a3b8;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10001;
+  }
+
+  .close-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+  }
+
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10001;
+  }
+
+  .nav-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .nav-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  .nav-button:disabled:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-50%);
+  }
+
+  .prev-button {
+    left: 20px;
+  }
+
+  .next-button {
+    right: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .modal-content {
+      max-width: 95vw;
+      max-height: 95vh;
+    }
+
+    .modal-image {
+      max-height: 70vh;
+    }
+
+    .nav-button {
+      width: 40px;
+      height: 40px;
+    }
+
+    .close-button {
+      top: 10px;
+      right: 10px;
+    }
+
+    .prev-button {
+      left: 10px;
+    }
+
+    .next-button {
+      right: 10px;
+    }
+
+    .modal-caption {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<script>
+  interface ImageData {
+    src: string;
+    alt: string;
+    edition: string;
+  }
+
+  class ImageModal {
+    private modal: HTMLElement;
+    private modalImage: HTMLImageElement;
+    private modalCaption: HTMLElement;
+    private modalCounter: HTMLElement;
+    private closeButton: HTMLElement;
+    private prevButton: HTMLButtonElement;
+    private nextButton: HTMLButtonElement;
+    private allImages: ImageData[] = [];
+    private currentEditionImages: ImageData[] = [];
+    private currentIndex: number = 0;
+
+    constructor() {
+      this.modal = document.getElementById('image-modal')!;
+      this.modalImage = document.getElementById('modal-image') as HTMLImageElement;
+      this.modalCaption = document.getElementById('modal-caption')!;
+      this.modalCounter = document.getElementById('modal-counter')!;
+      this.closeButton = document.getElementById('close-modal')!;
+      this.prevButton = document.getElementById('prev-image') as HTMLButtonElement;
+      this.nextButton = document.getElementById('next-image') as HTMLButtonElement;
+
+      this.init();
+    }
+
+    private init() {
+      // Close modal when clicking anywhere in the overlay
+      this.modal.addEventListener('click', (e) => {
+        this.close();
+      });
+
+      // Close button
+      this.closeButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.close();
+      });
+
+      // Navigation events - prevent closing
+      this.prevButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.navigate(-1);
+      });
+      
+      this.nextButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.navigate(1);
+      });
+
+      // Prevent closing when clicking on the image itself
+      this.modalImage.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+
+      // Prevent closing when clicking on modal info (caption/counter)
+      this.modalCaption.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+      
+      this.modalCounter.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (!this.modal.classList.contains('show')) return;
+        
+        if (e.key === 'Escape') this.close();
+        if (e.key === 'ArrowLeft') this.navigate(-1);
+        if (e.key === 'ArrowRight') this.navigate(1);
+      });
+
+      // Setup gallery images
+      this.setupGalleryImages();
+    }
+
+    private setupGalleryImages() {
+      const galleryImages = document.querySelectorAll('.gallery-image');
+      
+      galleryImages.forEach((img) => {
+        const imgElement = img as HTMLImageElement;
+        const edition = img.getAttribute('data-edition') || '';
+        
+        this.allImages.push({
+          src: imgElement.src,
+          alt: imgElement.alt,
+          edition: edition
+        });
+
+        img.addEventListener('click', (e) => {
+          e.stopPropagation();
+          // Filter images by edition and find the index
+          this.currentEditionImages = this.allImages.filter(image => image.edition === edition);
+          const indexInEdition = this.currentEditionImages.findIndex(image => image.src === imgElement.src);
+          this.open(indexInEdition);
+        });
+
+        // Add cursor pointer
+        (img as HTMLElement).style.cursor = 'pointer';
+      });
+    }
+
+    private open(index: number) {
+      this.currentIndex = index;
+      this.modal.classList.remove('hidden');
+      setTimeout(() => this.modal.classList.add('show'), 10);
+      document.body.style.overflow = 'hidden';
+      this.updateImage();
+    }
+
+    private close() {
+      this.modal.classList.remove('show');
+      setTimeout(() => {
+        this.modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    private navigate(direction: number) {
+      this.currentIndex += direction;
+      if (this.currentIndex < 0) this.currentIndex = this.currentEditionImages.length - 1;
+      if (this.currentIndex >= this.currentEditionImages.length) this.currentIndex = 0;
+      this.updateImage();
+    }
+
+    private updateImage() {
+      const image = this.currentEditionImages[this.currentIndex];
+      this.modalImage.src = image.src;
+      this.modalImage.alt = image.alt;
+      this.modalCaption.textContent = `${image.edition} - ${image.alt}`;
+      this.modalCounter.textContent = `${this.currentIndex + 1} / ${this.currentEditionImages.length}`;
+
+      // Update button states
+      this.prevButton.disabled = false;
+      this.nextButton.disabled = false;
+    }
+  }
+
+  // Initialize modal when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => new ImageModal());
+  } else {
+    new ImageModal();
+  }
+</script>

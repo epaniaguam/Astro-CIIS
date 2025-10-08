@@ -25,7 +25,7 @@ const CardPonent = ({
   };
 
   return (
-    <div className="card-custom grid grid-cols-4 sm:grid-cols-5 rounded-lg sm:rounded-2xl px-2 sm:px-5 py-2 sm:py-5 gap-1 sm:gap-5 text-slate-400 mx-2 border-2 border-slate-800">
+    <div className="card-custom grid grid-cols-4 sm:grid-cols-5 rounded-lg sm:rounded-2xl px-2 sm:px-5 py-2 sm:py-5 gap-1 sm:gap-5 text-slate-400 mx-2 border-2 border-slate-800" style={{backgroundColor: '#1a2332'}}>
       <span className="text-center sm:text-center font-bold text-sm sm:text-5xl col-span-4 sm:col-span-1 sm:leading-6 my-auto">
         {convertTo12HourFormat(time)} <span className="text-xs sm:text-3xl">-</span>{" "}
         {convertTo12HourFormat(lastTime)}

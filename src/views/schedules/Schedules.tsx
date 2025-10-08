@@ -35,7 +35,7 @@ const Schedules = () => {
       className="w-full flex flex-col items-center mb-24 max-w-screen-md mx-auto pt-40 sm:pt-48"
     >
       <h2 className="text-4xl font-bold text-center text-secondary sm:text-6xl slide-top leading-relaxed sm:leading-loose">
-        Cronograma
+        Agenda
       </h2>
       <p className="text-center text-base mb-8 mt-8">
         Todas las charlas estan en directo por{" "}

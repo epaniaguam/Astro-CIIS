@@ -24,7 +24,7 @@ const Prices: React.FC = () => {
       ],
     },
     {
-      title: "Delegaciones (5+)",
+      title: "Delegaciones",
       discountPrice: 100,
       normalPrice: 120,
       additionalNote:

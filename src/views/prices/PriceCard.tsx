@@ -36,7 +36,7 @@ const PriceCard: React.FC<PriceCardProps> = ({
         Luego:{" "}
         <span className='text-white font-semibold'>s/{normalPrice}.00</span>
         <br />
-        <span className='text-sm'>(precio normal)</span>
+        {/* <span className='text-sm'>(precio normal)</span> */}
       </p>
       <div className='border-t border-gray-700 my-4'></div>
       <p className='text-white font-semibold mb-2'>Beneficios: </p>
@@ -50,11 +50,6 @@ const PriceCard: React.FC<PriceCardProps> = ({
           </li>
         ))}
       </ul>
-      {additionalNote && (
-        <p className='text-xs text-gray-300 italic text-left mb-4'>
-          {additionalNote}
-        </p>
-      )}
       <a
         href={formUrl}
         target='_blank'
@@ -63,6 +58,11 @@ const PriceCard: React.FC<PriceCardProps> = ({
       >
         Inscribirse ahora
       </a>
+      {additionalNote && (
+        <p className='text-xs text-gray-300 italic text-left mt-4'>
+          {additionalNote}
+        </p>
+      )}
     </div>
   );
 };

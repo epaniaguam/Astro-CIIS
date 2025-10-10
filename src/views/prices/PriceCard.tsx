@@ -18,7 +18,7 @@ const PriceCard: React.FC<PriceCardProps> = ({
   additionalNote,
 }) => {
   return (
-    <div className='bg-[#000415] rounded-3xl p-8 transform transition-all hover:scale-105 border border-cyan-500 hover:border-cyan-400 hover:bg-[#020c3a] shadow-lg'>
+    <div className='bg-[#000415] rounded-3xl p-8 transform transition-all hover:scale-105 border border-cyan-500 hover:border-cyan-400 hover:bg-[#032038] shadow-lg'>
       <h3 className='text-2xl font-bold text-white text-center mb-4'>
         {title}
       </h3>
@@ -54,7 +54,7 @@ const PriceCard: React.FC<PriceCardProps> = ({
         href={formUrl}
         target='_blank'
         rel='noopener noreferrer'
-        className='block w-full text-center bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded transition-colors duration-200'
+        className='block w-full text-center bg-cyan-700 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded transition-colors duration-200'
       >
         Inscribirse ahora
       </a>

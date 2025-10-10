@@ -40,7 +40,7 @@ const Schedules = () => {
       <p className="text-center text-base mb-8 mt-8">
         Todas las charlas estan en directo por{" "}
         <a
-          href="https://www.facebook.com/61556532988025/live_videos/"
+          href="https://www.facebook.com/ciistacna"
           target="_blank"
           rel="noopener noreferrer"
           className="font-mono text-xl text-blue-300"

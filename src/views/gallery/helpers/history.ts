@@ -423,4 +423,28 @@ export const imagenesGaleria = [
       },
     ],
   },
+  {
+    title: "POSTMASTER XXII",
+    description:
+      "Vigésima segunda edición del Postmaster del Encuentro de egresados",
+    anio: 2024,
+    items: [
+      {
+        image: "/ciis-history/postmaster-xxii-flyer-principal.webp",
+        name: "Flyer Principal",
+      },
+      {
+        image: "/ciis-history/postmaster-xxii-ponentes.webp",
+        name: "Flyer de ponentes",
+      },
+      {
+        image: "/ciis-history/postmaster-xxii-auditorio.webp",
+        name: "Fotografía de auditorío",
+      },
+      {
+        image: "/ciis-history/postmaster-xxii-organizadores.webp",
+        name: "Fotografía de organizadores",
+      },
+    ],
+  },
 ].reverse();

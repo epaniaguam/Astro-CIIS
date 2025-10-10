@@ -1,6 +1,7 @@
 ---
 import EditionGalleryLeft from "./components/EditionGalleryLeft.astro";
 import EditionMainContainer from "./components/EditionMainContainer.astro";
+import ImageModal from "./components/ImageModal.astro";
 import { imagenesGaleria } from "./helpers/history";
 
 ---
@@ -10,3 +11,5 @@ import { imagenesGaleria } from "./helpers/history";
         <EditionGalleryLeft titleStrong={galeria.title} items={galeria.items} />
     ))}
 </section>
+
+<ImageModal />

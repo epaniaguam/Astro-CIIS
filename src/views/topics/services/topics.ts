@@ -2,12 +2,12 @@ import type Props from "../adapters/topicAdapter";
 import { Image1_1, Image2_1, Image1_2, Image2_2, Image1_3, Image2_3, Image1_4, Image2_4, Image1_5, Image2_5, Image1_6, Image2_6, Image1_7, Image2_7, Image1_8, Image2_8, Image1_9, Image2_9 } from "../../../assets/topics/index.astro";
 
 export const topic : Props[] = [
-    {
-        name: "Blockchain y Criptomonedas",
-        description: "Explora cómo Blockchain revoluciona la seguridad y transparencia, y cómo las criptomonedas están transformando las finanzas globales.",
-        image1: Image1_1,
-        image2: Image2_1,
-    },
+    // {
+    //     name: "Blockchain y Criptomonedas",
+    //     description: "Explora cómo Blockchain revoluciona la seguridad y transparencia, y cómo las criptomonedas están transformando las finanzas globales.",
+    //     image1: Image1_1,
+    //     image2: Image2_1,
+    // },
     /*
     {
         name: "Ciencias de la Computación",

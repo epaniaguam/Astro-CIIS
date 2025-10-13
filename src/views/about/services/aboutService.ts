@@ -12,10 +12,10 @@ const aboutCIIS = [
       "26 años reuniendo a los mejores ponentes del mundo. ¡Únete a la celebración!",
   },
   {
-    title1: "7",
+    title1: "6",
     title2: "Temáticas",
     description:
-      "7 temas actuales que no querrás perderte. ¡Explora lo último en tecnología!",
+      "6 temas actuales que no querrás perderte. ¡Explora lo último en tecnología!",
   },
   {
     title1: "4",

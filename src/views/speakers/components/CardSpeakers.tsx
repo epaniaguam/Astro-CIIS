@@ -8,6 +8,7 @@ import {
   FlagPeru,
   FlagSouthKorea,
   FlagUruguay,
+  FlagVenezuela,
 } from "../../../components/icons/index.tsx";
 import "./CardSpeakers.css";
 
@@ -31,6 +32,8 @@ function getFlagComponent(nationality: string) {
       return <FlagColombia />;
     case "Uruguay":
       return <FlagUruguay />;
+    case "Venezuela":
+      return <FlagVenezuela />;
     default:
       return null;
   }

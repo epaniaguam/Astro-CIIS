@@ -1,1 +1,0 @@
-import{j as o}from"./jsx-runtime.2X-s0L5T.js";import{r}from"./index.DeEakWXg.js";import{a as t}from"./auth.wxBLcJ7l.js";import"./endpoints.DprMjbcE.js";function m(){const e=new URLSearchParams(window.location.search).get("access_token");return r.useEffect(()=>{t(e)},[]),o.jsx("p",{children:"Redireccionando..."})}export{m as default};

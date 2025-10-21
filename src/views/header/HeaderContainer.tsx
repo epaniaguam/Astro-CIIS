@@ -127,7 +127,7 @@ const HeaderContainer = () => {
             )} */}
 
             {/* Botón de Talleres */}
-{/*             <a
+            {/*             <a
               href='/workshops'
               className={`hidden sm:flex items-center cursor-pointer gap-2 rounded-lg px-4 py-[10px] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed ${bgButton} text-white ${shadowButton} ${shadowButtonHover} hover:scale-110 font-medium`}
               title='Ver Talleres CIIS'
@@ -138,7 +138,7 @@ const HeaderContainer = () => {
 
             {/* TODO: TEMPORAL HASTA QUE HABILITEN LA INSCRIPCION */}
             <a
-              className='hidden sm:flex items-center cursor-pointer gap-2 rounded-lg px-4 py-[10px] transition-all duration-300 bg-gradient-to-br from-green-500 via-emerald-500 to-teal-600 text-white hover:from-green-400 hover:via-emerald-400 hover:to-teal-500 hover:scale-110 font-medium shadow-[0_0_20px_rgba(16,185,129,0.5)] hover:shadow-[0_0_30px_rgba(16,185,129,0.7)]'
+              className={`hidden sm:flex items-center cursor-pointer gap-2 rounded-lg px-4 py-[10px] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed ${bgButton} text-white ${shadowButton} ${shadowButtonHover} hover:scale-110 font-medium`}
               title='Únete al CIIS XXV'
               aria-label='Inscripción Congreso Internacional de Informática y Sistemas'
               href='https://forms.gle/C9EpUkNN1YHT3reT6'

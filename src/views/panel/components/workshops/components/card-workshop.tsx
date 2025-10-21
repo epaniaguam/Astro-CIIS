@@ -86,9 +86,9 @@ const CardWorkshop = ({
     <div className='flex min-h-48 lg:h-[320px] overflow-hidden border border-white/30 rounded-sm max-w-4xl hover:scale-105 group flex-col lg:flex-row px-2 py-4 sm:pl-6 sm:py-2 sm:px-1 lg:px-0 lg:py-0 lg:pl-8'>
       <div className='flex w-full items-center gap-x-8'>
         <div className='flex flex-col items-center gap-y-4'>
-          <div className='w-24 h-min rounded-full overflow-hidden'>
+          <div className='w-24 h-24 rounded-full overflow-hidden flex-shrink-0'>
             <img
-              className='w-full object-cover'
+              className='w-full h-full object-cover'
               src={src_speaker}
               alt='Imagen del expositor'
               loading='lazy'
@@ -98,7 +98,7 @@ const CardWorkshop = ({
               draggable='false'
             />
           </div>
-          <span className='text-white/80 text-xs md:text-sm lg:text-base text-center'>
+          <span className='text-white/80 text-xs md:text-sm lg:text-base text-center w-24 line-clamp-3'>
             {degree_speaker} {name_speaker} {lastname_speaker}
           </span>
         </div>
@@ -107,22 +107,26 @@ const CardWorkshop = ({
             <h4 className='uppercase font-bold text-sm sm:text-base md:text-lg lg:text-xl text-white/95 group-hover:underline'>
               {title}
             </h4>
-            <div className='flex gap-x-2 text-white/80 text-xs md:text-sm lg:text-base'>
-              <IconDate
-                size={24}
-                color='#7AAEF1'
-              />
+            <div className='flex items-start gap-x-2 text-white/80 text-xs md:text-sm lg:text-base'>
+              <div className='flex-shrink-0 w-6 flex items-center justify-center'>
+                <IconDate
+                  size={20}
+                  color='#7AAEF1'
+                />
+              </div>
               <span>
                 {`${format(parseISO(date), "dd-MMMM/yyyy", { locale: es })}`
                   .replace("-", " de ")
                   .replace("/", " del ")}
               </span>
             </div>
-            <div className='flex gap-x-2 text-white/80 text-xs md:text-sm lg:text-base'>
-              <IconTime
-                size={24}
-                color='#7AAEF1'
-              />
+            <div className='flex items-start gap-x-2 text-white/80 text-xs md:text-sm lg:text-base'>
+              <div className='flex-shrink-0 w-6 flex items-center justify-center'>
+                <IconTime
+                  size={20}
+                  color='#7AAEF1'
+                />
+              </div>
               <span>
                 {format(new Date(start), "HH:mm")} -{" "}
                 {format(new Date(end), "HH:mm")}
@@ -134,26 +138,32 @@ const CardWorkshop = ({
                 </span>
               )}
             </div>
-            <div className='flex gap-x-2 text-white/80 text-xs md:text-sm lg:text-base'>
-              <IconLocation
-                size={24}
-                color='#7AAEF1'
-              />
+            <div className='flex items-start gap-x-2 text-white/80 text-xs md:text-sm lg:text-base'>
+              <div className='flex-shrink-0 w-6 flex items-center justify-center'>
+                <IconLocation
+                  size={20}
+                  color='#7AAEF1'
+                />
+              </div>
               <span>{location}</span>
             </div>
-            <div className='flex gap-x-2 text-white/80 text-xs md:text-sm lg:text-base'>
-              <IconPrice
-                size={24}
-                color='#7AAEF1'
-              />
+            <div className='flex items-start gap-x-2 text-white/80 text-xs md:text-sm lg:text-base'>
+              <div className='flex-shrink-0 w-6 flex items-center justify-center'>
+                <IconPrice
+                  size={20}
+                  color='#7AAEF1'
+                />
+              </div>
               <span>S/.{price}</span>
             </div>
             {Boolean(requirements) && (
-              <div className='flex gap-x-2 text-white/80 text-xs md:text-sm lg:text-base'>
-                <IconRequirements
-                  size={24}
-                  color='#7AAEF1'
-                />
+              <div className='flex items-start gap-x-2 text-white/80 text-xs md:text-sm lg:text-base'>
+                <div className='flex-shrink-0 w-6 flex items-center justify-center'>
+                  <IconRequirements
+                    size={20}
+                    color='#7AAEF1'
+                  />
+                </div>
                 <span>Requerimientos: {requirements}</span>
               </div>
             )}

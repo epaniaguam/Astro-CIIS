@@ -32,12 +32,12 @@ const BtnWorkshop = ({
   className,
   label,
   handleClick,
-  disabled = false
+  disabled = false,
 }: {
   className: string;
   label: string;
-  handleClick?: () => void
-  disabled?: boolean
+  handleClick?: () => void;
+  disabled?: boolean;
 }) => {
   return (
     <button
@@ -72,84 +72,111 @@ const CardWorkshop = ({
 }: Props) => {
   const endDate = new Date() > new Date(end);
 
+  // Función original de inscripción interna
+  // const handleClick = () => {
+  //   window.location.href = `/workshops/pago/${encodeURIComponent(id)}`;
+  // };
+
+  // Google forms que se uso para el CIIS XXVI
   const handleClick = () => {
-    window.location.href = `/workshops/pago/${encodeURIComponent(id)}`;
+    window.open("https://forms.gle/g3PxJ3B4u5wdStnh7", "_blank");
   };
 
   return (
-    <div className="flex min-h-48 lg:h-[320px] overflow-hidden border border-white/30 rounded-sm max-w-4xl hover:scale-105 group flex-col lg:flex-row px-2 py-4 sm:pl-6 sm:py-2 sm:px-1 lg:px-0 lg:py-0 lg:pl-8">
-      <div className="flex w-full items-center gap-x-8">
-        <div className="flex flex-col items-center gap-y-4">
-          <div className="w-24 h-min rounded-full overflow-hidden">
+    <div className='flex min-h-48 lg:h-[320px] overflow-hidden border border-white/30 rounded-sm max-w-4xl hover:scale-105 group flex-col lg:flex-row px-2 py-4 sm:pl-6 sm:py-2 sm:px-1 lg:px-0 lg:py-0 lg:pl-8'>
+      <div className='flex w-full items-center gap-x-8'>
+        <div className='flex flex-col items-center gap-y-4'>
+          <div className='w-24 h-min rounded-full overflow-hidden'>
             <img
-              className="w-full object-cover"
+              className='w-full object-cover'
               src={src_speaker}
-              alt="Imagen del expositor"
-              loading="lazy"
-              decoding="async"
+              alt='Imagen del expositor'
+              loading='lazy'
+              decoding='async'
               width={1600}
               height={900}
-              draggable="false"
+              draggable='false'
             />
           </div>
-          <span className="text-white/80 text-xs md:text-sm lg:text-base text-center">{degree_speaker} {name_speaker} {lastname_speaker}</span>
+          <span className='text-white/80 text-xs md:text-sm lg:text-base text-center'>
+            {degree_speaker} {name_speaker} {lastname_speaker}
+          </span>
         </div>
-        <div className="flex flex-col sm:flex-row lg:flex-col gap-y-4 items-center lg:items-start gap-x-4">
-          <div className="flex flex-col gap-y-1">
-            <h4 className="uppercase font-bold text-sm sm:text-base md:text-lg lg:text-xl text-white/95 group-hover:underline">
+        <div className='flex flex-col sm:flex-row lg:flex-col gap-y-4 items-center lg:items-start gap-x-4'>
+          <div className='flex flex-col gap-y-1'>
+            <h4 className='uppercase font-bold text-sm sm:text-base md:text-lg lg:text-xl text-white/95 group-hover:underline'>
               {title}
             </h4>
-            <div className="flex gap-x-2 text-white/80 text-xs md:text-sm lg:text-base">
-              <IconDate size={24} color="#7AAEF1" />
-              <span>{`${format(parseISO(date), "dd-MMMM/yyyy", { locale: es })}`
-                  .replace("-", " de ")
-                  .replace("/", " del ")}</span>
-            </div>
-            <div className="flex gap-x-2 text-white/80 text-xs md:text-sm lg:text-base">
-              <IconTime size={24} color="#7AAEF1" />
+            <div className='flex gap-x-2 text-white/80 text-xs md:text-sm lg:text-base'>
+              <IconDate
+                size={24}
+                color='#7AAEF1'
+              />
               <span>
-                {format(new Date(start), "HH:mm")} - {format(new Date(end), "HH:mm")}
+                {`${format(parseISO(date), "dd-MMMM/yyyy", { locale: es })}`
+                  .replace("-", " de ")
+                  .replace("/", " del ")}
               </span>
-              {(Boolean(start_2) && Boolean(end_2)) && (
+            </div>
+            <div className='flex gap-x-2 text-white/80 text-xs md:text-sm lg:text-base'>
+              <IconTime
+                size={24}
+                color='#7AAEF1'
+              />
+              <span>
+                {format(new Date(start), "HH:mm")} -{" "}
+                {format(new Date(end), "HH:mm")}
+              </span>
+              {Boolean(start_2) && Boolean(end_2) && (
                 <span>
-                  & {format(new Date(start_2), "HH:mm")} - {format(new Date(end_2), "HH:mm")}
+                  & {format(new Date(start_2), "HH:mm")} -{" "}
+                  {format(new Date(end_2), "HH:mm")}
                 </span>
               )}
             </div>
-            <div className="flex gap-x-2 text-white/80 text-xs md:text-sm lg:text-base">
-              <IconLocation size={24} color="#7AAEF1" />
+            <div className='flex gap-x-2 text-white/80 text-xs md:text-sm lg:text-base'>
+              <IconLocation
+                size={24}
+                color='#7AAEF1'
+              />
               <span>{location}</span>
             </div>
-            <div className="flex gap-x-2 text-white/80 text-xs md:text-sm lg:text-base">
-              <IconPrice size={24} color="#7AAEF1" />
+            <div className='flex gap-x-2 text-white/80 text-xs md:text-sm lg:text-base'>
+              <IconPrice
+                size={24}
+                color='#7AAEF1'
+              />
               <span>S/.{price}</span>
             </div>
-            {(Boolean(requirements)) && (
-              <div className="flex gap-x-2 text-white/80 text-xs md:text-sm lg:text-base">
-                <IconRequirements size={24} color="#7AAEF1" />
+            {Boolean(requirements) && (
+              <div className='flex gap-x-2 text-white/80 text-xs md:text-sm lg:text-base'>
+                <IconRequirements
+                  size={24}
+                  color='#7AAEF1'
+                />
                 <span>Requerimientos: {requirements}</span>
               </div>
             )}
           </div>
-          <div className="w-full sm:w-min">
+          <div className='w-full sm:w-min'>
             {!registered ? (
               <>
                 {endDate ? (
                   <BtnWorkshop
-                    className="bg-gray-400"
-                    label="Inscripciones cerradas"
+                    className='bg-gray-400'
+                    label='Inscripciones cerradas'
                     disabled={true}
                   />
                 ) : avaible > 0 ? (
                   <BtnWorkshop
-                    className="bg-[#FAAEF1] hover:bg-[#AAAEF1]"
-                    label="Inscribirse"
+                    className='bg-[#FAAEF1] hover:bg-[#AAAEF1]'
+                    label='Inscribirse'
                     handleClick={handleClick}
                   />
                 ) : (
                   <BtnWorkshop
-                    className="bg-gray-400"
-                    label="Inscripciones cerradas"
+                    className='bg-gray-400'
+                    label='Inscripciones cerradas'
                     disabled={true}
                   />
                 )}
@@ -164,18 +191,18 @@ const CardWorkshop = ({
           </div>
         </div>
       </div>
-      <div className="h-full relative hidden lg:block">
+      <div className='h-full relative hidden lg:block'>
         <img
-          className="h-full object-cover"
+          className='h-full object-cover'
           src={src_workshop}
-          alt="Imagen de algo relacionado al taller"
-          loading="lazy"
-          decoding="async"
+          alt='Imagen de algo relacionado al taller'
+          loading='lazy'
+          decoding='async'
           width={500}
           height={500}
-          draggable="false"
+          draggable='false'
         />
-        <div className="absolute inset-0 bg-gradient-to-l from-transparent to-black/70"></div>
+        <div className='absolute inset-0 bg-gradient-to-l from-transparent to-black/70'></div>
       </div>
     </div>
   );

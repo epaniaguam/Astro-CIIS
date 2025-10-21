@@ -38,7 +38,7 @@ const Schedules = () => {
         Agenda
       </h2>
       <p className="text-center text-base mb-8 mt-8">
-        Todas las charlas estan en directo por{" "}
+        Todas las charlas están en directo por{" "}
         <a
           href="https://www.facebook.com/ciistacna"
           target="_blank"

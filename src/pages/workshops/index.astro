@@ -1,13 +1,11 @@
 ---
-return new Response(null, {
-  status: 404,
-  statusText: 'Not found'
-});
 import Layout from "../../layouts/Layout.astro";
 import { CURRENT_CIIS_EDITION } from "../../config";
 import WorkshopContainer from "../../views/workshops/WorkshopContainer.astro";
 ---
 
-<Layout title=`Talleres | Congreso Internacional de Informática y Sistemas ${CURRENT_CIIS_EDITION}`>
-    <WorkshopContainer/>
+<Layout
+  title={`Talleres | Congreso Internacional de Informática y Sistemas ${CURRENT_CIIS_EDITION}`}
+>
+  <WorkshopContainer />
 </Layout>

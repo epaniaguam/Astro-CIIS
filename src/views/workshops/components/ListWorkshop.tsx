@@ -16,14 +16,14 @@ const ListWorkshop = () => {
       name.includes("robótica") ||
       name.includes("robot")
     ) {
-      return "https://images.unsplash.com/photo-1589254066213-a0c9dc853511?w=800"; // Robótica
+      return "/taller_sensores_actuadores_robotica.webp"; // Robótica
     } else if (
       name.includes("programación") ||
       name.includes("programación competitiva")
     ) {
-      return "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800"; // Programación
+      return "/taller_programacion.webp"; // Programación competitiva
     } else if (name.includes("videojuego") || name.includes("juego")) {
-      return "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800"; // Videojuegos
+      return "https://www.baker.edu/wp-content/uploads/game-developer-degree.jpg?w=800"; // Videojuegos
     } else if (
       name.includes("series temporales") ||
       name.includes("análisis")

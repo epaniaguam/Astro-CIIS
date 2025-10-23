@@ -41,7 +41,7 @@ const BtnWorkshop = ({
 }) => {
   return (
     <button
-      className={`px-6 py-1 sm:px-6 sm:py-2 w-full lg:w-60 text-sm sm:text-base ${className} font-semibold hover:font-bold transition-colors rounded-full uppercase tracking-wider text-[#333333]`}
+      className={`px-6 py-1 sm:px-6 sm:py-2 w-full sm:w-auto lg:w-60 text-sm sm:text-base ${className} font-semibold hover:font-bold transition-colors rounded-full uppercase tracking-wider text-[#333333]`}
       onClick={handleClick}
       disabled={disabled}
     >
@@ -102,8 +102,8 @@ const CardWorkshop = ({
             {degree_speaker} {name_speaker} {lastname_speaker}
           </span>
         </div>
-        <div className='flex flex-col sm:flex-row lg:flex-col gap-y-4 items-center lg:items-start gap-x-4'>
-          <div className='flex flex-col gap-y-1'>
+        <div className='flex flex-col sm:flex-row lg:flex-col gap-y-4 items-start sm:items-center lg:items-start gap-x-4 w-full'>
+          <div className='flex flex-col gap-y-1 flex-1'>
             <h4 className='uppercase font-bold text-sm sm:text-base md:text-lg lg:text-xl text-white/95 group-hover:underline'>
               {title}
             </h4>
@@ -168,7 +168,7 @@ const CardWorkshop = ({
               </div>
             )}
           </div>
-          <div className='w-full sm:w-min'>
+          <div className='w-full sm:w-auto flex justify-center sm:justify-start lg:justify-start sm:items-center'>
             {!registered ? (
               <>
                 {endDate ? (

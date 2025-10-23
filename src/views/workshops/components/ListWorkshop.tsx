@@ -8,6 +8,32 @@ import { AuthProvider } from "../../panel/context/AuthContext";
 const ListWorkshop = () => {
   const { user } = useAuth();
   const [workshops, setWorkshops] = useState<Workshop[] | undefined>();
+  const getWorkshopImage = (workshopName: string): string => {
+    const name = workshopName.toLowerCase();
+
+    if (
+      name.includes("sensor") ||
+      name.includes("robótica") ||
+      name.includes("robot")
+    ) {
+      return "/taller_sensores_actuadores_robotica.webp"; // Robótica
+    } else if (
+      name.includes("programación") ||
+      name.includes("programación competitiva")
+    ) {
+      return "/taller_programacion.webp"; // Programación competitiva
+    } else if (name.includes("videojuego") || name.includes("juego")) {
+      return "https://www.baker.edu/wp-content/uploads/game-developer-degree.jpg?w=800"; // Videojuegos
+    } else if (
+      name.includes("series temporales") ||
+      name.includes("análisis")
+    ) {
+      return "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800"; // Análisis de datos
+    }
+
+    // Imagen por defecto
+    return "https://i.imgur.com/89Wsfpc.jpeg";
+  };
 
   useEffect(() => {
     const useWorkshops = async () => {
@@ -28,32 +54,33 @@ const ListWorkshop = () => {
   return (
     <>
       {workshops &&
-          workshops.map((workshop, index) => {
-            let cwk = user?.talleres.find((t: any) => t.id == workshop.id);
-            return (
-              <CardWorkshop
-                key={index}
-                id={workshop.id}
-                title={workshop.name}
-                date={workshop.date}
-                start={workshop.start}
-                end={workshop.end}
-                start_2={workshop.start_2}
-                end_2={workshop.end_2}
-                location={workshop.place}
-                requirements={workshop.requirements}
-                price={workshop.price}
-                degree_speaker={workshop.speaker.degree_speaker}
-                name_speaker={workshop.speaker.name_speaker}
-                lastname_speaker={workshop.speaker.lastname_speaker}
-                src_speaker={`https://ciistacna.com/${workshop.speaker.dir_img_speaker}`}
-                src_workshop="https://i.imgur.com/89Wsfpc.jpeg"
-                avaible={workshop.avaible}
-                registered={Boolean(cwk)}
-                state={cwk?.state}
-              />
-            )
-          })}
+        workshops.map((workshop, index) => {
+          let cwk = user?.talleres.find((t: any) => t.id == workshop.id);
+          return (
+            <CardWorkshop
+              key={index}
+              id={workshop.id}
+              title={workshop.name}
+              date={workshop.date}
+              start={workshop.start}
+              end={workshop.end}
+              start_2={workshop.start_2}
+              end_2={workshop.end_2}
+              location={workshop.place}
+              requirements={workshop.requirements}
+              price={workshop.price}
+              degree_speaker={workshop.speaker.degree_speaker}
+              name_speaker={workshop.speaker.name_speaker}
+              lastname_speaker={workshop.speaker.lastname_speaker}
+              src_speaker={`https://ciistacna.com/${workshop.speaker.dir_img_speaker}`}
+              /* src_workshop="https://i.imgur.com/89Wsfpc.jpeg" //imagen anterior*/
+              src_workshop={getWorkshopImage(workshop.name)}
+              avaible={workshop.avaible}
+              registered={Boolean(cwk)}
+              state={cwk?.state}
+            />
+          );
+        })}
     </>
   );
 };
@@ -62,5 +89,5 @@ export default () => {
     <AuthProvider>
       <ListWorkshop />
     </AuthProvider>
-  )
+  );
 };

@@ -16,7 +16,7 @@ const ListWorkshop = () => {
       name.includes("robótica") ||
       name.includes("robot")
     ) {
-      return "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800"; // Robótica
+      return "https://images.unsplash.com/photo-1589254066213-a0c9dc853511?w=800"; // Robótica
     } else if (
       name.includes("programación") ||
       name.includes("programación competitiva")

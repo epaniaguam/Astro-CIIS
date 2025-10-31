@@ -28,7 +28,7 @@ const PriceCard: React.FC<PriceCardProps> = ({
         </span>
         <span className='text-gray-400 text-sm'>.00</span>
         <p className='text-sm text-gray-400 mt-2 italic'>
-          Válido hasta el 31 de Octubre
+          Válido hasta el 10 de Noviembre
         </p>
       </div>
 

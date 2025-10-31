@@ -43,7 +43,8 @@ const Prices: React.FC = () => {
           Inscripciones
         </h2>
         <p className='text-center text-cyan-400 mb-8'>
-          Aprovecha el descuento especial válido hasta el 31 de Octubre de 2025
+          ¡Aprovecha la promoción extendida hasta el 10 de Noviembre de 2025 al
+          medio día!
         </p>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'>
           {priceData.map((price, index) => (

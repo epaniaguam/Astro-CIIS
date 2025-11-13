@@ -83,7 +83,7 @@ const CardWorkshop = ({
   };
 
   return (
-    <div className='flex min-h-48 lg:h-[320px] overflow-hidden border border-white/30 rounded-sm max-w-4xl hover:scale-105 group flex-col lg:flex-row px-2 py-4 sm:pl-6 sm:py-2 sm:px-1 lg:px-0 lg:py-0 lg:pl-8'>
+    <div className='hover:my-2 flex min-h-48 lg:h-[320px] overflow-hidden border border-white/30 rounded-sm max-w-4xl hover:scale-105 group flex-col lg:flex-row px-2 py-4 sm:pl-6 sm:py-2 sm:px-1 lg:px-0 lg:py-0 lg:pl-8'>
       <div className='flex w-full items-center gap-x-8'>
         <div className='flex flex-col items-center gap-y-4'>
           <div className='w-24 h-24 rounded-full overflow-hidden flex-shrink-0'>
@@ -173,8 +173,8 @@ const CardWorkshop = ({
               <>
                 {endDate ? (
                   <BtnWorkshop
-                    className='bg-gray-400'
-                    label='Inscripciones cerradas'
+                    className='bg-gray-400 font-extrabold'
+                    label='¡SOLD OUT!'
                     disabled={true}
                   />
                 ) : avaible > 0 ? (
@@ -185,8 +185,8 @@ const CardWorkshop = ({
                   />
                 ) : (
                   <BtnWorkshop
-                    className='bg-gray-400'
-                    label='Inscripciones cerradas'
+                    className='bg-gray-400 font-extrabold'
+                    label='¡SOLD OUT!'
                     disabled={true}
                   />
                 )}

@@ -1,0 +1,24 @@
+---
+import EditionMainContainer from "../gallery/components/EditionMainContainer.astro";
+import SummerWorkshop from "./components/SummerWorkshop.astro";
+import ChatbotCard from "./components/ChatbotCard.astro";
+---
+
+<section class='space-y-24 mb-24'>
+  <EditionMainContainer
+    title='Talleres de Verano'
+    description='Participa en nuestros talleres intensivos de verano diseñados para fortalecer habilidades prácticas en distintas áreas de la informática.'
+    image='/FeriaTecnologia.webp'
+  />
+
+  <SummerWorkshop
+    title='Talleres de Verano 2026'
+    description={`Aprende desde cualquier lugar y aprovecha tu tiempo con nuestros cursos virtuales en vivo, ideales para quienes buscan capacitarse sin descuidar sus estudios o trabajo.
+El Círculo de Estudios de la ESIS pone a tu alcance formación actualizada en programación, análisis de datos, inteligencia artificial, ciberseguridad y mucho más.`}
+    image='/cfa.webp'
+    date='02 de febrero de 2026'
+    modality='Presencial y Virtual'
+    link_facebook='https://www.facebook.com/CirculoDeEstudiosDeLaEsis'
+    link_form='https://forms.gle/jgbz5ZLH7BfPnSMt8'
+  />
+</section>

@@ -143,11 +143,11 @@ const HeaderContainer = () => {
               
               title='Únete al CIIS XXVI'
               aria-label='Inscripción Congreso Internacional de Informática y Sistemas'
-              href='https://forms.gle/C9EpUkNN1YHT3reT6'
+              // href='https://forms.gle/C9EpUkNN1YHT3reT6'
               target='_blank'
               rel='noopener noreferrer'
             >
-              Inscríbete
+              Proximamente
             </a>
             <button className='sm:hidden flex items-center cursor-pointer gap-2 rounded-lg px-4 py-[10px] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed ${bgButton} text-white ${shadowButton} ${shadowButtonHover} hover:scale-110 ml-auto font-medium'></button>
 

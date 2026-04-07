@@ -76,10 +76,10 @@ const HeaderContainer = () => {
             aria-label='Ir a la página principal'
           >
             <img
-              src='/LOGOCIIS.svg'
+              src='/logo-sis.svg'
               alt='Logo del CIIS XXVI'
-              width='150'
-              height='150'
+              width='90'
+              height='90'
               loading='lazy'
               decoding='async'
               draggable='false'

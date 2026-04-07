@@ -33,11 +33,11 @@ function Speakers() {
   return (
     <section id="speakers" className="pt-10 sm:py-20">
       <div className="m-auto max-w-5xl pb-16">
-        <h2 className="text-4xl font-bold text-center text-secondary sm:text-6xl slide-top">
+        {/* <h2 className="text-4xl font-bold text-center text-secondary sm:text-6xl slide-top">
           Conoce a nuestros <span className="text-primary">Ponentes</span>
-        </h2>
+        </h2> */}
       </div>
-      <div className="m-auto max-w-5xl grid gap-y-8 grid-cols-1 lg:grid-cols-3 sm:grid-cols-2">
+      {/* <div className="m-auto max-w-5xl grid gap-y-8 grid-cols-1 lg:grid-cols-3 sm:grid-cols-2">
         {loading ? (
           <>
             <SpeakerSkeleton />
@@ -60,15 +60,15 @@ function Speakers() {
             />
           ))
         )}
-      </div>
+      </div> */}
       {/* TODO: ELIMINAR CUANDO ESTEN LISTOS LOS PONENTES */}
-      {/* <div className="mt-14 text-center">
+      <div className="mt-14 text-center mb-56">
         <p className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight leading-tight notice-pulse">
           <span className="block">¡MUY PRONTO</span>
-          <span className="block">REVELAREMOS MÁS PONENTES!</span>
+          <span className="block">REVELAREMOS LOS PONENTES!</span>
         </p>
         <div className="mt-4 h-1 w-48 mx-auto rounded-full underline-pan" />
-      </div> */}
+      </div>
       <style>{`
             @media (prefers-reduced-motion: reduce) {
               .notice-pulse, .underline-pan { animation: none !important; }
